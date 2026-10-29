@@ -78,6 +78,7 @@ function head({ title, description, url, image, up, extra = '' }) {
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="${up}favicon.png" type="image/png">
 <link rel="apple-touch-icon" href="${up}apple-touch-icon.png">
+<script defer data-website-id="s4wg5uvb3mth" src="https://appsight.thisischetan-media.workers.dev/js/script.js"></script>
 <link rel="alternate" type="application/rss+xml" title="Nasi Kitchen Journal" href="${SITE}/blog/rss.xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
