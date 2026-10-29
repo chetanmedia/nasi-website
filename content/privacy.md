@@ -37,7 +37,7 @@ You can sign up with Apple, Google or email and password. If you use Sign in wit
 
 **Device identifiers.** We create a random, app-specific identifier to link your device to your recipe library. It isn’t your Apple advertising identifier, and we don’t use it to track you across other apps or websites.
 
-**Subscription status.** We receive information about whether you have an active Nasi+ subscription. It comes through our subscription provider and includes things like your plan, trial status and renewal status.
+**Subscription status.** We receive information about whether you have an active Nasi Pro subscription. It comes through our subscription provider and includes things like your plan, trial status and renewal status.
 
 **Technical logs.** Our servers keep limited technical logs, such as import job status and error messages, to run the Service and fix problems.
 
