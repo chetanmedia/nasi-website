@@ -3,7 +3,7 @@ title: Privacy Policy
 updated: 2026-10-29
 ---
 
-Nasi (“Nasi,” “we,” “our,” or “us”) helps you save recipes from social media, websites, photos and PDFs and turn them into organized, cookable recipes. This Privacy Policy explains what information we collect, how we use it, and the choices you have when you use the Nasi mobile app and related services (the “Service”).
+Nasi (“Nasi,” “we,” “our,” or “us”) helps you save recipes from TikTok, Instagram and Facebook videos, photos and PDFs and turn them into organized, cookable recipes. This Privacy Policy explains what information we collect, how we use it, and the choices you have when you use the Nasi mobile app and related services (the “Service”).
 
 By using the Service, you agree to the collection and use of information as described in this policy.
 
@@ -23,7 +23,7 @@ You can sign up with Apple, Google or email and password. If you use Sign in wit
 
 **Recipes and content you import.** When you save a recipe, we process what you give us:
 
-- **Links:** social media links (such as TikTok, Instagram or YouTube) and website links.
+- **Links:** TikTok, Instagram and Facebook links.
 - **Photos:** photos or screenshots of recipes that you pick or take with the camera.
 - **PDFs:** PDF files that you upload.
 
