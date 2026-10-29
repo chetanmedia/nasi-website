@@ -49,3 +49,6 @@ Posts dated in the future stay hidden until their day, so posts can be queued ah
 2. Write `content/blog/{slug}.md`, then run `npm run build` locally to catch errors.
 3. Set the row's `status` to `"published"` in the plan JSON.
 4. Commit both files and push. Netlify deploys.
+
+## Topics that touch unsupported sources
+- Nasi cannot import YouTube, Pinterest or recipe website/blog links. For posts about Pinterest pins or long recipe blogs, the honest Nasi route is: screenshot the recipe and scan it, or copy the recipe text and paste it into Nasi. Never say Nasi opens or reads the link.
