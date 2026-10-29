@@ -1,0 +1,322 @@
+[
+ {
+  "cluster": "PLAN",
+  "cluster_name": "Meal planning & grocery",
+  "title": "How to Meal Plan for One Without Wasting Food",
+  "slug": "how-to-meal-plan-for-one-person",
+  "primary_keyword": "how to meal plan for one person",
+  "volume": 40,
+  "sd": 22,
+  "nasi_feature": "Weekly meal planner"
+ },
+ {
+  "cluster": "PLAN",
+  "cluster_name": "Meal planning & grocery",
+  "title": "How to Meal Plan for a Family (Even With Picky Eaters)",
+  "slug": "how-to-meal-plan-for-a-family",
+  "primary_keyword": "how to meal plan for a family",
+  "volume": 110,
+  "sd": 36,
+  "nasi_feature": "Weekly meal planner"
+ },
+ {
+  "cluster": "REF",
+  "cluster_name": "Kitchen reference",
+  "title": "Dijon Mustard Substitutes",
+  "slug": "substitute-for-dijon",
+  "primary_keyword": "substitute for dijon",
+  "volume": 22200,
+  "sd": 29,
+  "nasi_feature": "Serving scaler"
+ },
+ {
+  "cluster": "REF",
+  "cluster_name": "Kitchen reference",
+  "title": "Vegan Gelatin Substitutes",
+  "slug": "vegan-substitute-for-gelatin",
+  "primary_keyword": "vegan substitute for gelatin",
+  "volume": 18100,
+  "sd": 30,
+  "nasi_feature": "Serving scaler"
+ },
+ {
+  "cluster": "REF",
+  "cluster_name": "Kitchen reference",
+  "title": "Paprika Substitutes",
+  "slug": "substitute-for-paprika",
+  "primary_keyword": "substitute for paprika",
+  "volume": 14800,
+  "sd": 27,
+  "nasi_feature": "Serving scaler"
+ },
+ {
+  "cluster": "REF",
+  "cluster_name": "Kitchen reference",
+  "title": "Chicken Stock Substitutes",
+  "slug": "substitute-for-chicken-stock",
+  "primary_keyword": "substitute for chicken stock",
+  "volume": 12100,
+  "sd": 32,
+  "nasi_feature": "Serving scaler"
+ },
+ {
+  "cluster": "REF",
+  "cluster_name": "Kitchen reference",
+  "title": "Tahini Substitutes",
+  "slug": "substitute-for-tahini",
+  "primary_keyword": "substitute for tahini",
+  "volume": 12100,
+  "sd": 29,
+  "nasi_feature": "Serving scaler"
+ },
+ {
+  "cluster": "REF",
+  "cluster_name": "Kitchen reference",
+  "title": "Nutmeg and Allspice Substitutes for Holiday Baking",
+  "slug": "substitute-for-nutmeg",
+  "primary_keyword": "substitute for nutmeg",
+  "volume": 12100,
+  "sd": 30,
+  "nasi_feature": "Serving scaler"
+ },
+ {
+  "cluster": "REF",
+  "cluster_name": "Kitchen reference",
+  "title": "Lemon Juice Substitutes",
+  "slug": "substitute-for-lemon-juice",
+  "primary_keyword": "substitute for lemon juice",
+  "volume": 12100,
+  "sd": 33,
+  "nasi_feature": "Serving scaler"
+ },
+ {
+  "cluster": "REF",
+  "cluster_name": "Kitchen reference",
+  "title": "Brown Sugar Substitutes",
+  "slug": "substitute-for-brown-sugar",
+  "primary_keyword": "substitute for brown sugar",
+  "volume": 9900,
+  "sd": 28,
+  "nasi_feature": "Serving scaler"
+ },
+ {
+  "cluster": "REF",
+  "cluster_name": "Kitchen reference",
+  "title": "Buttermilk Substitutes for Pancakes, Biscuits and Fried Chicken",
+  "slug": "substitute-for-butter-milk",
+  "primary_keyword": "substitute for butter milk",
+  "volume": 22200,
+  "sd": 45,
+  "nasi_feature": "Serving scaler"
+ },
+ {
+  "cluster": "REF",
+  "cluster_name": "Kitchen reference",
+  "title": "Half and Half Substitutes",
+  "slug": "substitute-for-half-and-half",
+  "primary_keyword": "substitute for half and half",
+  "volume": 18100,
+  "sd": 46,
+  "nasi_feature": "Serving scaler"
+ },
+ {
+  "cluster": "REF",
+  "cluster_name": "Kitchen reference",
+  "title": "Cream Cheese Substitutes",
+  "slug": "substitute-for-cream-cheese",
+  "primary_keyword": "substitute for cream cheese",
+  "volume": 18100,
+  "sd": 49,
+  "nasi_feature": "Serving scaler"
+ },
+ {
+  "cluster": "REF",
+  "cluster_name": "Kitchen reference",
+  "title": "Greek Yogurt as a Sour Cream Substitute (and Other Swaps)",
+  "slug": "substitute-for-sour-cream-greek-yogurt",
+  "primary_keyword": "substitute for sour cream greek yogurt",
+  "volume": 12100,
+  "sd": 38,
+  "nasi_feature": "Serving scaler"
+ },
+ {
+  "cluster": "REF",
+  "cluster_name": "Kitchen reference",
+  "title": "How to Scale a Recipe Up or Down Without Ruining It",
+  "slug": "how-to-scale-a-recipe",
+  "primary_keyword": "how to scale a recipe",
+  "volume": 320,
+  "sd": 25,
+  "nasi_feature": "Serving scaler"
+ },
+ {
+  "cluster": "IDEAS",
+  "cluster_name": "Dinner ideas & roundups",
+  "title": "High-Protein Crockpot Recipes",
+  "slug": "crockpot-recipes-high-protein",
+  "primary_keyword": "crockpot recipes high protein",
+  "volume": 12100,
+  "sd": 31,
+  "nasi_feature": "Weekly meal planner"
+ },
+ {
+  "cluster": "IDEAS",
+  "cluster_name": "Dinner ideas & roundups",
+  "title": "Air Fryer Sweet Potato Recipes",
+  "slug": "sweet-potato-air-fryer-recipes",
+  "primary_keyword": "sweet potato air fryer recipes",
+  "volume": 4400,
+  "sd": 7,
+  "nasi_feature": "Hands-free cook mode"
+ },
+ {
+  "cluster": "IDEAS",
+  "cluster_name": "Dinner ideas & roundups",
+  "title": "What to Make With Ground Turkey",
+  "slug": "what-to-make-with-ground-turkey",
+  "primary_keyword": "what to make with ground turkey",
+  "volume": 9900,
+  "sd": 33,
+  "nasi_feature": "Searchable cookbook & collections"
+ },
+ {
+  "cluster": "IDEAS",
+  "cluster_name": "Dinner ideas & roundups",
+  "title": "Easy Dinner Ideas for Beginners: 25 Recipes You Cannot Mess Up",
+  "slug": "easy-dinner-ideas-for-beginners",
+  "primary_keyword": "easy dinner ideas for beginners",
+  "volume": 3600,
+  "sd": 14,
+  "nasi_feature": "Hands-free cook mode"
+ },
+ {
+  "cluster": "IDEAS",
+  "cluster_name": "Dinner ideas & roundups",
+  "title": "What to Make With Chuck Roast",
+  "slug": "what-to-make-with-chuck-roast",
+  "primary_keyword": "what to make with chuck roast",
+  "volume": 3600,
+  "sd": 25,
+  "nasi_feature": "Searchable cookbook & collections"
+ },
+ {
+  "cluster": "IDEAS",
+  "cluster_name": "Dinner ideas & roundups",
+  "title": "Healthy Easy Dinner Ideas for Two",
+  "slug": "easy-dinner-ideas-for-two-healthy",
+  "primary_keyword": "easy dinner ideas for two healthy",
+  "volume": 2900,
+  "sd": 20,
+  "nasi_feature": "Serving scaler"
+ },
+ {
+  "cluster": "IDEAS",
+  "cluster_name": "Dinner ideas & roundups",
+  "title": "Easy Dinner Ideas for a Party",
+  "slug": "easy-dinner-ideas-for-a-party",
+  "primary_keyword": "easy dinner ideas for a party",
+  "volume": 2400,
+  "sd": 11,
+  "nasi_feature": "Weekly meal planner"
+ },
+ {
+  "cluster": "IDEAS",
+  "cluster_name": "Dinner ideas & roundups",
+  "title": "What to Make With Leftover Egg Whites",
+  "slug": "what-to-make-with-egg-white",
+  "primary_keyword": "what to make with egg white",
+  "volume": 1900,
+  "sd": 12,
+  "nasi_feature": "Searchable cookbook & collections"
+ },
+ {
+  "cluster": "IDEAS",
+  "cluster_name": "Dinner ideas & roundups",
+  "title": "Most-Pinned Dinner Recipes and How to Keep Them",
+  "slug": "pinterest-recipes-dinner",
+  "primary_keyword": "pinterest recipes dinner",
+  "volume": 1900,
+  "sd": 17,
+  "nasi_feature": "Share-sheet import from TikTok, Instagram & Facebook"
+ },
+ {
+  "cluster": "IDEAS",
+  "cluster_name": "Dinner ideas & roundups",
+  "title": "Easy Dinner Ideas for One",
+  "slug": "easy-dinner-ideas-for-one",
+  "primary_keyword": "easy dinner ideas for one",
+  "volume": 4400,
+  "sd": 26,
+  "nasi_feature": "Serving scaler"
+ },
+ {
+  "cluster": "IDEAS",
+  "cluster_name": "Dinner ideas & roundups",
+  "title": "Easy Mexican Dinner Ideas",
+  "slug": "easy-dinner-ideas-mexican",
+  "primary_keyword": "easy dinner ideas mexican",
+  "volume": 2900,
+  "sd": 26,
+  "nasi_feature": "Searchable cookbook & collections"
+ },
+ {
+  "cluster": "IDEAS",
+  "cluster_name": "Dinner ideas & roundups",
+  "title": "Cheap Dinner Ideas for a Big Family",
+  "slug": "cheap-dinner-ideas-for-a-big-family",
+  "primary_keyword": "cheap dinner ideas for a big family",
+  "volume": 590,
+  "sd": 25,
+  "nasi_feature": "Aisle-sorted grocery list"
+ },
+ {
+  "cluster": "IDEAS",
+  "cluster_name": "Dinner ideas & roundups",
+  "title": "Pinterest Crockpot Recipes That Actually Work",
+  "slug": "pinterest-recipes-crockpot",
+  "primary_keyword": "pinterest recipes crockpot",
+  "volume": 480,
+  "sd": 30,
+  "nasi_feature": "Share-sheet import from TikTok, Instagram & Facebook"
+ },
+ {
+  "cluster": "IDEAS",
+  "cluster_name": "Dinner ideas & roundups",
+  "title": "What to Make for Dinner When You Have Nothing in the Fridge",
+  "slug": "what-to-make-for-dinner-when-you-have-nothing",
+  "primary_keyword": "what to make for dinner when you have nothing",
+  "volume": 390,
+  "sd": 35,
+  "nasi_feature": "Searchable cookbook & collections"
+ },
+ {
+  "cluster": "IDEAS",
+  "cluster_name": "Dinner ideas & roundups",
+  "title": "Viral TikTok Recipes Worth Making (We Tested Them)",
+  "slug": "viral-tiktok-recipes",
+  "primary_keyword": "viral tiktok recipes",
+  "volume": 720,
+  "sd": 43,
+  "nasi_feature": "Video-to-recipe extraction"
+ },
+ {
+  "cluster": "IDEAS",
+  "cluster_name": "Dinner ideas & roundups",
+  "title": "TikTok Recipes for Dinner: 20 Weeknight Winners",
+  "slug": "tiktok-recipes-for-dinner",
+  "primary_keyword": "tiktok recipes for dinner",
+  "volume": 210,
+  "sd": 31,
+  "nasi_feature": "Video-to-recipe extraction"
+ },
+ {
+  "cluster": "IDEAS",
+  "cluster_name": "Dinner ideas & roundups",
+  "title": "Trader Joe's TikTok Recipes That Live Up to the Hype",
+  "slug": "trader-joes-tiktok-recipes",
+  "primary_keyword": "trader joe's tiktok recipes",
+  "volume": 50,
+  "sd": 30,
+  "nasi_feature": "Video-to-recipe extraction"
+ }
+]
