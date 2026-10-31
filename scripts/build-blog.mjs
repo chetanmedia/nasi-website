@@ -76,7 +76,9 @@ function head({ title, description, url, image, up, extra = '' }) {
 <meta property="og:url" content="${url}">
 <meta property="og:image" content="${image}">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="icon" href="${up}favicon.png" type="image/png">
+<link rel="icon" href="${up}favicon.ico" sizes="48x48">
+<link rel="icon" href="${up}favicon-96.png" sizes="96x96" type="image/png">
+<link rel="icon" href="${up}favicon-192.png" sizes="192x192" type="image/png">
 <link rel="apple-touch-icon" href="${up}apple-touch-icon.png">
 <script defer data-website-id="s4wg5uvb3mth" src="https://appsight.thisischetan-media.workers.dev/js/script.js"></script>
 <link rel="alternate" type="application/rss+xml" title="Nasi Kitchen Journal" href="${SITE}/blog/rss.xml">
