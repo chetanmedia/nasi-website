@@ -23,3 +23,7 @@ Marketing site for **Nasi: Recipe Saver** (iPhone). React 18 + Vite, framer-moti
 - `src/screens.jsx`: app screens rebuilt from the real app UI at 390×844 points
 - `src/data.js`: recipes, the noodle reel's heard/seen/read lines, cookbooks, plan, grocery data, FAQ
 - `src/three/`: procedural 3D ingredients and the nasi bowl
+
+## Country blocking
+- `netlify/edge-functions/geo-block.js` returns a 403 "not available in your region" page to visitors from India, Pakistan, Bangladesh and Nepal. Edit the `BLOCKED` list to change countries.
+- Owner bypass: set `GEO_BYPASS_KEY` in Netlify environment variables, then open `https://getnasi.app/?bypass=<key>` once per browser.
