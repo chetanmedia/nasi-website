@@ -5,6 +5,10 @@
 const BLOCKED = new Set(['IN', 'PK', 'BD', 'NP']) // India, Pakistan, Bangladesh, Nepal
 const COOKIE = 'nasi_bypass'
 
+// Search engine crawlers always get the real site, whatever country they crawl from,
+// so a crawl from a blocked country can never drop a page from the index.
+const CRAWLERS = /Googlebot|Google-InspectionTool|GoogleOther|Storebot-Google|AdsBot-Google|bingbot|BingPreview|Applebot|DuckDuckBot|YandexBot/i
+
 const page = `<!doctype html><html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex"><title>Nasi is not available in your region</title>
@@ -14,6 +18,7 @@ const page = `<!doctype html><html lang="en"><head><meta charset="utf-8">
 export default async (request, context) => {
   const country = context.geo?.country?.code
   if (!country || !BLOCKED.has(country)) return context.next()
+  if (CRAWLERS.test(request.headers.get('user-agent') || '')) return context.next()
 
   const key = globalThis.Netlify?.env?.get('GEO_BYPASS_KEY')
   if (key) {
