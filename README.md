@@ -27,4 +27,4 @@ Marketing site for **Nasi: Recipe Saver** (iPhone). React 18 + Vite, framer-moti
 ## Country blocking
 - `netlify/edge-functions/geo-block.js` returns a 403 "not available in your region" page to visitors from India, Pakistan, Bangladesh and Nepal. Edit the `BLOCKED` list to change countries.
 - Search engine crawlers (Googlebot, Bingbot, Applebot, DuckDuckBot, YandexBot) are always let through, from any country.
-- Owner bypass: set `GEO_BYPASS_KEY` in Netlify environment variables, then open `https://getnasi.app/?bypass=<key>` once per browser.
+- Owner pass: open `https://getnasi.app/?as_ignore=true` once per browser (also excludes you from Appsight). Optional: set `GEO_BYPASS_KEY` in Netlify and use `?bypass=<key>`.

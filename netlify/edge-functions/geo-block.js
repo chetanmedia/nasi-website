@@ -1,6 +1,6 @@
 // Blocks visitors from selected countries at Netlify's edge, before any page loads.
-// Owner bypass: set GEO_BYPASS_KEY in Netlify (Site configuration → Environment variables),
-// then open https://getnasi.app/?bypass=<that key> once per browser. It sets a cookie for a year.
+// Owner pass: open https://getnasi.app/?as_ignore=true once per browser. It loads the site, sets a
+// one-year cookie, and Appsight excludes you. Optional extra key: GEO_BYPASS_KEY + ?bypass=<key>.
 
 const BLOCKED = new Set(['IN', 'PK', 'BD', 'NP']) // India, Pakistan, Bangladesh, Nepal
 const COOKIE = 'nasi_bypass'
@@ -23,6 +23,17 @@ export default async (request, context) => {
   if (!country || !BLOCKED.has(country)) return context.next()
   if (ICONS.test(new URL(request.url).pathname)) return context.next()
   if (CRAWLERS.test(request.headers.get('user-agent') || '')) return context.next()
+
+  // Owner pass: opening any page with ?as_ignore=true (Appsight's "exclude me" link) lets you in
+  // and sets a one-year cookie. Anyone using it is also excluded from Appsight, so it can't skew stats.
+  const url0 = new URL(request.url)
+  if (url0.searchParams.get('as_ignore') === 'true') {
+    const res = await context.next()
+    res.headers.append('Set-Cookie', `${COOKIE}=owner; Path=/; Max-Age=31536000; Secure; HttpOnly; SameSite=Lax`)
+    res.headers.set('Cache-Control', 'no-store')
+    return res
+  }
+  if ((request.headers.get('cookie') || '').split(/;\s*/).includes(`${COOKIE}=owner`)) return context.next()
 
   const key = globalThis.Netlify?.env?.get('GEO_BYPASS_KEY')
   if (key) {
