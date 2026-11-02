@@ -196,6 +196,42 @@ ${html}
 </main>` + foot(up)
 }
 
+/* ---------- account deletion (Google Play "Delete account URL") ---------- */
+function deletePage() {
+  const file = path.join(ROOT, 'content/delete-account.md')
+  if (!fs.existsSync(file)) return null
+  const { data, content } = matter(fs.readFileSync(file, 'utf8'))
+  const toc = []
+  const renderer = new marked.Renderer()
+  renderer.heading = (text, level) => {
+    const id = slugify(text)
+    if (level === 2) toc.push({ id, text: text.replace(/<[^>]+>/g, '') })
+    return `<h${level} id="${id}">${level === 2 ? `<span class="num">${String(toc.length).padStart(2, '0')}</span>` : ''}${text}</h${level}>\n`
+  }
+  const html = marked.parse(content, { renderer })
+  const up = '../'
+  const updated = data.updated instanceof Date ? data.updated.toISOString().slice(0, 10) : String(data.updated)
+  const mail = `mailto:${CFG.email}?subject=${encodeURIComponent('Delete my Nasi account')}`
+  const glance = [['📱', 'In the app', 'Settings → Account → Delete Account. Instant.'], ['✉️', 'By email', 'No app? Email us from your sign-in address.'], ['🗑️', 'Everything goes', 'Account, recipes, photos and cookbooks.'], ['⏱️', 'Within 30 days', 'Email requests are completed within 30 days.']]
+  return head({ title: 'Delete your account · Nasi', description: 'How to delete your Nasi: Recipe Saver account and data, in the app or by email.', url: `${SITE}/delete-account/`, image: `${SITE}/og.jpg`, up }) + nav(up) + `
+<main class="wrap post legal">
+  <header class="phead">
+    <p class="crumbs"><a href="${up}">Nasi</a> <span>/</span> Legal</p>
+    <h1>Delete your <em>account</em></h1>
+    <p class="dek">How to permanently delete your Nasi account and everything linked to it, on iPhone or Android.</p>
+    <p class="meta"><img src="${ICON(up)}" width="28" height="28" alt=""><span>Last updated ${fmtDate(updated)}</span></p>
+  </header>
+  <section class="glance">${glance.map(([e, h, t]) => `<div><i>${e}</i><b>${h}</b><p>${t}</p></div>`).join('')}</section>
+  <div class="pbody">
+    <article class="prose"><details class="toc-m"><summary>Contents</summary><nav class="toc"><ol>${toc.map((t) => `<li><a href="#${t.id}">${esc(t.text)}</a></li>`).join('')}</ol></nav></details>
+${html}
+    </article>
+    <aside class="side"><nav class="toc" aria-label="Contents"><b>Contents</b><ol>${toc.map((t) => `<li><a href="#${t.id}">${esc(t.text)}</a></li>`).join('')}</ol></nav>
+      <div class="contact"><b>Request deletion</b><p>Email us from the address you sign in with.</p><a class="btn" href="${mail}">Email a deletion request</a></div></aside>
+  </div>
+</main>` + foot(up)
+}
+
 /* ---------- write ---------- */
 const posts = readPosts()
 fs.mkdirSync(path.join(OUT, 'blog'), { recursive: true })
@@ -207,10 +243,12 @@ for (const p of posts) {
   fs.writeFileSync(path.join(OUT, 'blog', p.slug, 'index.html'), postPage(p, posts))
 }
 fs.writeFileSync(path.join(OUT, 'blog/posts.json'), JSON.stringify(posts.slice(0, 6).map(({ title, slug, cluster, date, cover, description, readTime }) => ({ title, slug, cluster, clusterName: CLUSTERS[cluster].name, date, cover, description, readTime }))))
-const urls = [`${SITE}/`, `${SITE}/blog/`, ...posts.map((p) => `${SITE}/blog/${p.slug}/`), `${SITE}/privacy/`]
+const urls = [`${SITE}/`, `${SITE}/blog/`, ...posts.map((p) => `${SITE}/blog/${p.slug}/`), `${SITE}/privacy/`, `${SITE}/delete-account/`]
 fs.writeFileSync(path.join(OUT, 'sitemap.xml'), `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.map((u, i) => `<url><loc>${u}</loc>${i > 1 && posts[i - 2] ? `<lastmod>${posts[i - 2].updated || posts[i - 2].date}</lastmod>` : ''}</url>`).join('\n')}\n</urlset>\n`)
 fs.writeFileSync(path.join(OUT, 'robots.txt'), `User-agent: *\nAllow: /\nSitemap: ${SITE}/sitemap.xml\n`)
 fs.writeFileSync(path.join(OUT, 'blog/rss.xml'), `<?xml version="1.0" encoding="UTF-8"?>\n<rss version="2.0"><channel><title>Nasi Kitchen Journal</title><link>${SITE}/blog/</link><description>Recipes, tips and kitchen know-how from Nasi.</description>\n${posts.slice(0, 30).map((p) => `<item><title>${esc(p.title)}</title><link>${SITE}/blog/${p.slug}/</link><guid>${SITE}/blog/${p.slug}/</guid><pubDate>${new Date(p.date + 'T09:00:00Z').toUTCString()}</pubDate><description>${esc(p.description)}</description></item>`).join('\n')}\n</channel></rss>\n`)
 const lp = legalPage()
 if (lp) { fs.mkdirSync(path.join(OUT, 'privacy'), { recursive: true }); fs.writeFileSync(path.join(OUT, 'privacy/index.html'), lp) }
+const dp = deletePage()
+if (dp) { fs.mkdirSync(path.join(OUT, 'delete-account'), { recursive: true }); fs.writeFileSync(path.join(OUT, 'delete-account/index.html'), dp) }
 console.log(`blog: ${posts.length} posts published (date ≤ ${TODAY})`)

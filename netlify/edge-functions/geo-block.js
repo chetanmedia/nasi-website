@@ -6,6 +6,8 @@ const BLOCKED = new Set(['IN', 'PK', 'BD', 'NP']) // India, Pakistan, Bangladesh
 const COOKIE = 'nasi_bypass'
 
 // Icon files are always served, so the browser tab shows the Nasi icon even on the blocked page.
+const LEGAL = /^\/(privacy|delete-account)(\/|$)/
+
 const ICONS = /^\/(favicon[^/]*\.(ico|png)|apple-touch-icon\.png)$/
 
 // Search engine crawlers always get the real site, whatever country they crawl from,
@@ -22,6 +24,9 @@ export default async (request, context) => {
   const country = context.geo?.country?.code
   if (!country || !BLOCKED.has(country)) return context.next()
   if (ICONS.test(new URL(request.url).pathname)) return context.next()
+  // Legal pages stay reachable everywhere: app stores (and their reviewers) require the privacy
+  // policy and account-deletion page to load for every user of the app.
+  if (LEGAL.test(new URL(request.url).pathname)) return context.next()
   if (CRAWLERS.test(request.headers.get('user-agent') || '')) return context.next()
 
   // Owner pass: opening any page with ?as_ignore=true (Appsight's "exclude me" link) lets you in

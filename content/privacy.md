@@ -1,6 +1,6 @@
 ---
 title: Privacy Policy
-updated: 2026-10-29
+updated: 2026-11-02
 ---
 
 Nasi (“Nasi,” “we,” “our,” or “us”) helps you save recipes from TikTok, Instagram and Facebook videos, photos and PDFs and turn them into organized, cookable recipes. This Privacy Policy explains what information we collect, how we use it, and the choices you have when you use the Nasi mobile app and related services (the “Service”).
@@ -31,11 +31,11 @@ You can sign up with Apple, Google or email and password. If you use Sign in wit
 
 **Communications.** If you contact us for support or send feedback or feature ideas, we collect the information you include.
 
-**Payment information.** Subscriptions are processed by Apple through the App Store. We never receive or store your credit card or payment details.
+**Payment information.** Subscriptions are processed by Apple through the App Store on iPhone, and by Google Play on Android. We never receive or store your credit card or payment details.
 
 ### Information Collected Automatically
 
-**Device identifiers.** We create a random, app-specific identifier to link your device to your recipe library. It isn’t your Apple advertising identifier, and we don’t use it to track you across other apps or websites.
+**Device identifiers.** We create a random, app-specific identifier to link your device to your recipe library. It isn’t your Apple or Google advertising identifier, and we don’t use it to track you across other apps or websites.
 
 **Subscription status.** We receive information about whether you have an active Nasi Pro subscription. It comes through our subscription provider and includes things like your plan, trial status and renewal status.
 
@@ -45,10 +45,10 @@ We do not use third-party advertising SDKs. We don’t sell your data or show yo
 
 ## Information That Stays on Your Device
 
-Some information never leaves your iPhone:
+Some information never leaves your phone:
 
 - **Profile photo.** If you add one, it’s stored only on your device.
-- **Hands-free voice commands.** Hands-free cook mode listens for short commands like “next,” “back” and “timer.” Speech recognition runs on your device, so voice audio isn’t sent to us or to third parties. The microphone is only used while hands-free mode is on.
+- **Hands-free voice commands.** Hands-free cook mode listens for short commands like “next,” “back” and “timer.” Speech recognition runs on your device, so voice audio isn’t sent to us. On Android, Nasi uses your phone’s built-in speech recognition service (usually provided by Google), which may process audio according to its own privacy policy. The microphone is only used while hands-free mode is on.
 - **Meal plan and grocery list.** These are stored locally on your device.
 - **App preferences.** Your layout, shelf style, appearance and similar settings are stored locally.
 
@@ -87,7 +87,7 @@ It’s used only to generate your recipe. Under OpenAI’s API data policy, this
 
 ## Permissions We Request
 
-Nasi only asks for device permissions when you use a feature that needs them. You can change them anytime in iOS Settings.
+Nasi only asks for device permissions when you use a feature that needs them. You can change them anytime in iOS Settings or Android Settings.
 
 | Permission | Why we ask |
 |---|---|
@@ -118,7 +118,7 @@ Nasi relies on these providers. Each one handles data under its own privacy poli
 | Apify | Retrieving publicly available captions and metadata from social media links |
 | RevenueCat | Managing subscriptions, free trials and purchase status |
 | Apple | Sign in with Apple, App Store distribution, payment processing and on-device speech recognition |
-| Google | Sign in with Google, if you choose it |
+| Google | Sign in with Google if you choose it, Google Play distribution and payment processing on Android, and Android speech recognition |
 
 ## Data Retention
 
@@ -134,11 +134,12 @@ Logging out of Nasi removes your account data from that device.
 You can delete your account and associated data:
 
 - **In the app:** Settings → Account → Delete Account, or
+- **On the web:** follow the steps at [getnasi.app/delete-account](/delete-account/), or
 - **By email:** contact us at the address below.
 
 Deleting your account permanently removes your account, recipes, cookbooks and onboarding answers from our systems.
 
-Deleting your account doesn’t cancel an active App Store subscription. Cancel it in your Apple ID settings → Subscriptions.
+Deleting your account doesn’t cancel an active subscription. On iPhone, cancel it in your Apple ID settings → Subscriptions. On Android, cancel it in Google Play → Payments & subscriptions → Subscriptions.
 
 ## Data Security
 
@@ -160,7 +161,7 @@ Depending on where you live, you may have the right to:
 - Object to or restrict certain processing.
 - Withdraw consent at any time, where we rely on consent.
 
-You can also turn off camera, photo, microphone, speech and notification access at any time in iOS Settings. To exercise any of these rights, contact us using the details below.
+You can also turn off camera, photo, microphone, speech and notification access at any time in iOS Settings or Android Settings. To exercise any of these rights, contact us using the details below.
 
 ## Children’s Privacy
 
