@@ -6,3 +6,4 @@
 - 2026-11-03 | dressing-for-thanksgiving-recipes | Thanksgiving Dressing and Stuffing Recipes | ~1286 words | dressing for thanksgiving recipes (pushed manually; scheduled run published nothing)
 - 2026-11-10 | teaspoon-is-how-many-tablespoons | Teaspoons to Tablespoons: Quick Conversions | ~1150 words | teaspoon is how many tablespoons
 - 2026-11-10 | thanksgiving-recipes-green-beans | Thanksgiving Green Bean Recipes | ~1120 words | thanksgiving recipes green beans (catch-up)
+- 2026-11-11 | thanksgiving-recipes-in-crockpot | Crockpot Thanksgiving Recipes That Free Up the Oven | ~1675 words | thanksgiving recipes in crockpot
