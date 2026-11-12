@@ -52,3 +52,10 @@ Posts dated in the future stay hidden until their day, so posts can be queued ah
 
 ## Topics that touch unsupported sources
 - Nasi cannot import YouTube, Pinterest or recipe website/blog links. For posts about Pinterest pins or long recipe blogs, the honest Nasi route is: screenshot the recipe and scan it, or copy the recipe text and paste it into Nasi. Never say Nasi opens or reads the link.
+
+## Free tools on the site (link to them)
+- Kitchen converter: `../../tools/kitchen-converter/` (cups, tbsp, tsp, fl oz, ml, grams, ounces; ingredient-aware grams to cups).
+- Exact-amount pages: `../../tools/convert/<slug>/`, e.g. `8-cups-to-ounces`, `1-2-cup-to-ounces`, `100-grams-to-cups`, `tablespoons-in-1-1-2-cups`. Full list in `scripts/build-tools.mjs`.
+- Turkey calculator: `../../tools/turkey-calculator/`.
+- In any REF (conversion, substitution) or Thanksgiving/turkey post, link the matching tool once in the body. The site also adds a tool card automatically to REF and Thanksgiving posts.
+- Do not write blog posts that target an exact-amount keyword already covered by a `/tools/convert/` page; link to that page instead.

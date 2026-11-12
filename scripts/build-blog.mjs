@@ -58,51 +58,9 @@ function readPosts() {
   }).filter((p) => p.date <= TODAY && !p.draft).sort((a, b) => (a.date < b.date ? 1 : -1))
 }
 
-/* ---------- shared chrome ---------- */
-const ICON = (up) => `${up}img/nasi-icon.png`
-function head({ title, description, url, image, up, extra = '' }) {
-  return `<!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>${esc(title)}</title>
-<meta name="description" content="${esc(description)}">
-<link rel="canonical" href="${url}">
-<meta name="theme-color" content="#0B1220">
-<meta property="og:type" content="article">
-<meta property="og:title" content="${esc(title)}">
-<meta property="og:description" content="${esc(description)}">
-<meta property="og:url" content="${url}">
-<meta property="og:image" content="${image}">
-<meta name="twitter:card" content="summary_large_image">
-<link rel="icon" href="${up}favicon.ico" sizes="48x48">
-<link rel="icon" href="${up}favicon-96.png" sizes="96x96" type="image/png">
-<link rel="icon" href="${up}favicon-192.png" sizes="192x192" type="image/png">
-<link rel="apple-touch-icon" href="${up}apple-touch-icon.png">
-<script defer data-website-id="s4wg5uvb3mth" src="https://appsight.thisischetan-media.workers.dev/js/script.js"></script>
-<link rel="alternate" type="application/rss+xml" title="Nasi Kitchen Journal" href="${SITE}/blog/rss.xml">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap">
-<link rel="stylesheet" href="${up}blog/blog.css">
-${extra}
-</head>
-<body>`
-}
-function nav(up) {
-  return `<header class="nav"><a class="brand" href="${up}"><img src="${ICON(up)}" width="34" height="34" alt=""><b>Nasi</b></a>
-<nav><a href="${up}#how">How it works</a><a href="${up}#sources">Import</a><a href="${up}#pricing">Pricing</a><a href="${up}blog/" class="on">Blog</a></nav>
-<a class="store" href="${CFG.appStore}"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M16.37 12.6c-.02-2.3 1.88-3.4 1.96-3.46-1.07-1.56-2.73-1.77-3.32-1.8-1.41-.14-2.76.83-3.48.83-.72 0-1.83-.81-3.01-.79-1.55.02-2.98.9-3.78 2.29-1.61 2.8-.41 6.94 1.16 9.21.77 1.11 1.68 2.36 2.88 2.31 1.16-.05 1.6-.75 3-.75s1.79.75 3.01.72c1.25-.02 2.04-1.13 2.8-2.25.88-1.29 1.24-2.54 1.26-2.6-.03-.01-2.42-.93-2.48-3.71zM14.08 5.85c.64-.77 1.07-1.85.95-2.92-.92.04-2.03.61-2.69 1.38-.59.68-1.11 1.78-.97 2.83 1.02.08 2.07-.52 2.71-1.29z"/></svg><span><small>Download on the</small><b>App Store</b></span></a></header>`
-}
-function appCard(up, cls = '') {
-  return `<aside class="appcard ${cls}"><img src="${ICON(up)}" width="56" height="56" alt=""><b>Saw a recipe on a reel?</b><p>Share it to Nasi and get a clean recipe with exact amounts and steps. Free on iPhone.</p><a class="btn" href="${CFG.appStore}">Get Nasi free</a></aside>`
-}
-function foot(up) {
-  return `<footer class="foot"><div class="wrap"><a class="brand" href="${up}"><img src="${ICON(up)}" width="30" height="30" alt=""><b>Nasi</b></a><p>Recipe Saver for iPhone. Save recipes from reels, photos and PDFs, then plan and cook.</p><nav><a href="${up}">Home</a><a href="${up}blog/">Blog</a><a href="${up}#pricing">Pricing</a><a href="${up}privacy/">Privacy</a><a href="mailto:${CFG.email}">Contact</a></nav><small>© ${new Date().getFullYear()} Nasi</small></div></footer>
-<script src="${up}blog/blog.js" defer></script>
-</body></html>`
-}
+/* ---------- shared chrome (scripts/chrome.mjs) ---------- */
+import { head, nav, appCard, foot, ICON, toolCard } from './chrome.mjs'
+
 function card(p, up, big = false) {
   const c = CLUSTERS[p.cluster]
   return `<a class="card ${big ? 'big' : ''}" href="${up}blog/${p.slug}/" data-cluster="${p.cluster}">
@@ -150,6 +108,7 @@ function postPage(p, posts) {
   <div class="pbody">
     <article class="prose">${p.toc.length ? `<details class="toc-m"><summary>On this page</summary>${toc}</details>` : ''}
 ${p.html}
+${/thanksgiving|turkey/.test(p.slug) ? toolCard(up, 'turkey') : p.cluster === 'REF' ? toolCard(up, 'converter') : ''}
 ${p.faq.length ? `<section class="faq" id="faq"><h2>FAQ</h2>${p.faq.map((f) => `<details><summary>${esc(f.q)}</summary><p>${esc(f.a)}</p></details>`).join('')}</section>` : ''}
 ${appCard(up, 'inline')}
     </article>

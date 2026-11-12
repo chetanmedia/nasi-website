@@ -12,7 +12,7 @@ export function Nav() {
     <header className={`nav ${solid ? 'solid' : ''}`}>
       <a className="brand" href="#top" aria-label="Nasi home"><AppIcon size={34} /><b>Nasi</b></a>
       <nav aria-label="Main">
-        <a href="#how">How it works</a><a href="#sources">Import</a><a href="#plan">Meal plan</a><a href="#pricing">Pricing</a><a href="./blog/">Blog</a>
+        <a href="#how">How it works</a><a href="#sources">Import</a><a href="#plan">Meal plan</a><a href="#pricing">Pricing</a><a href="./tools/">Tools</a><a href="./blog/">Blog</a>
       </nav>
       <AppStore small />
     </header>

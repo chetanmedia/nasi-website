@@ -128,7 +128,7 @@ export function Footer() {
         <div className="fb"><span className="brand"><AppIcon size={34} /><b>Nasi</b></span><p>Recipe Saver for iPhone. Save recipes from reels, links, photos and PDFs, then plan, shop and cook.</p></div>
         <div><h6>Product</h6><ul><li><a href="#how">How it works</a></li><li><a href="#sources">Import methods</a></li><li><a href="#plan">Meal plan &amp; Tote</a></li><li><a href="#cook">Cook mode</a></li><li><a href="#pricing">Pricing</a></li></ul></div>
         
-        <div><h6>Help</h6><ul><li><a href="#faq">FAQ</a></li><li><a href="./blog/">Blog</a></li><li><a href="./privacy/">Privacy Policy</a></li><li><a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank" rel="noopener">Terms of Use</a></li><li><a href="mailto:chetu699@gmail.com">chetu699@gmail.com</a></li></ul></div>
+        <div><h6>Help</h6><ul><li><a href="#faq">FAQ</a></li><li><a href="./tools/kitchen-converter/">Kitchen converter</a></li><li><a href="./tools/turkey-calculator/">Turkey calculator</a></li><li><a href="./blog/">Blog</a></li><li><a href="./privacy/">Privacy Policy</a></li><li><a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank" rel="noopener">Terms of Use</a></li><li><a href="mailto:chetu699@gmail.com">chetu699@gmail.com</a></li></ul></div>
       </div>
       <div className="wrap foot-base"><span>© 2026 Nasi. All rights reserved.</span><span>For iPhone · Made by Chetan Nagaraja</span></div>
     </footer>
