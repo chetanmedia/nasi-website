@@ -108,7 +108,7 @@ function postPage(p, posts) {
   <div class="pbody">
     <article class="prose">${p.toc.length ? `<details class="toc-m"><summary>On this page</summary>${toc}</details>` : ''}
 ${p.html}
-${/thanksgiving|turkey/.test(p.slug) ? toolCard(up, 'turkey') : p.cluster === 'REF' ? toolCard(up, 'converter') : ''}
+${/thanksgiving|turkey/.test(p.slug) ? toolCard(up, 'turkey') : /substitut|swap/.test(p.slug) ? toolCard(up, 'substitute') : p.cluster === 'REF' ? toolCard(up, 'converter') : p.cluster === 'PLAN' || /meal-prep|scale/.test(p.slug) ? toolCard(up, 'scaler') : ''}
 ${p.faq.length ? `<section class="faq" id="faq"><h2>FAQ</h2>${p.faq.map((f) => `<details><summary>${esc(f.q)}</summary><p>${esc(f.a)}</p></details>`).join('')}</section>` : ''}
 ${appCard(up, 'inline')}
     </article>

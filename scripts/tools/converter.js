@@ -192,18 +192,20 @@ function hydrate(root) {
     render(true)
   })
   $('.cv-copy').addEventListener('click', async (e) => {
+    const btn = e.currentTarget
     const out = convert(st.a, st.from, st.to, st.ing)
     const text = `${eqTxt.textContent} = ${fmt(out)} ${name(st.to, out)}`
-    try { await navigator.clipboard.writeText(text); flash(e.currentTarget, 'Copied') } catch { flash(e.currentTarget, 'Copy failed') }
+    try { await navigator.clipboard.writeText(text); flash(btn, 'Copied') } catch { flash(btn, 'Copy failed') }
   })
   $('.cv-share').addEventListener('click', async (e) => {
+    const btn = e.currentTarget
     const q = new URLSearchParams({ a: fmtIn(st.a), from: st.from, to: st.to, i: st.ing })
     const url = `${location.origin}${root.dataset.home || location.pathname}?${q}`
     const out = convert(st.a, st.from, st.to, st.ing)
     const text = `${eqTxt.textContent} = ${fmt(out)} ${name(st.to, out)}`
     try {
       if (navigator.share) await navigator.share({ title: 'Nasi kitchen converter', text, url })
-      else { await navigator.clipboard.writeText(url); flash(e.currentTarget, 'Link copied') }
+      else { await navigator.clipboard.writeText(url); flash(btn, 'Link copied') }
     } catch {}
   })
   const recentBox = $('.cv-recent')

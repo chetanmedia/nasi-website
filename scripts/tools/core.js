@@ -159,7 +159,7 @@ export function measureWith(ml) {
 export function measureText(ml) {
   const m = measureWith(ml)
   if (m.pinch) return 'a pinch'
-  return m.parts.map((p) => (p.n > 1 ? `${p.n} × ${p.label}` : p.label)).join(' + ')
+  return m.parts.map((p) => (p.n > 1 ? (p.label.startsWith('1 ') ? `${p.n} ${p.label.slice(2)}${p.label.endsWith('cup') ? 's' : ''}` : `${p.n} × ${p.label}`) : p.label)).join(' + ')
 }
 
 /* ---------- Turkey (USDA FSIS figures) ---------- */
@@ -204,4 +204,95 @@ export function sidesFor(guests) {
     { e: '🥐', name: 'Dinner rolls', v: `${Math.ceil(g * 1.5)}` },
     { e: '🥧', name: 'Pies', v: `${Math.max(1, Math.ceil(g / 8))}` }
   ]
+}
+
+/* ---------- kitchen-friendly amounts ---------- */
+const plural = (n, one, many) => (n > 1 + 1e-9 ? many : one)
+/* ml -> "¾ cup", "3 tbsp", "1 ½ tsp", or a scoop combo like "1 cup + 2 tbsp" */
+export function kitchenVolume(ml) {
+  if (!isFinite(ml) || ml <= 0) return '0'
+  const cups = ml / UNITS.cup.base, tb = ml / UNITS.tbsp.base, ts = ml / UNITS.tsp.base
+  if (ts < 0.1) return 'a pinch'
+  if (cups >= 0.245) { const f = niceFraction(cups, 0.02); if (f && !/[⅛⅜⅝⅞]/.test(f.text)) return `${f.text} ${plural(cups, 'cup', 'cups').replace(/s$/, cups > 1.03 ? 's' : '')}` }
+  if (tb >= 1 && cups < 0.5) {
+    const r = tb - Math.floor(tb)
+    if (r < 0.04 || r > 0.96) return `${Math.round(tb)} tbsp`
+    if (Math.abs(r - 0.5) < 0.04) return `${Math.floor(tb)} ½ tbsp`
+  }
+  if (ts < 3.2) { const f = niceFraction(ts, 0.06); if (f && !/[⅜⅝⅞⅓⅔]/.test(f.text)) return `${f.text} tsp` }
+  return measureText(ml)
+}
+/* count -> "1 ½", "3", "2.4" */
+export function kitchenCount(n, tol = 0.06) {
+  if (!isFinite(n)) return '–'
+  const f = niceFraction(n, tol)
+  return f ? f.text : fmt(n)
+}
+
+/* ---------- ingredient line parsing (recipe scaler) ---------- */
+const U_ALIASES = [
+  ['floz', /^(fl\.?\s*oz\.?|fluid\s+ounces?)\b/i], ['tbsp', /^(tbsps?\.?|tbls?\.?|tbs\.?|tablespoons?|T)(?=\s|$|\.)/], ['tsp', /^(tsps?\.?|teaspoons?|t)(?=\s|$|\.)/],
+  ['cup', /^(cups?|c\.?)(?=\s|$)/i], ['pint', /^(pints?|pt\.?)(?=\s|$)/i], ['quart', /^(quarts?|qt\.?)(?=\s|$)/i], ['gallon', /^(gallons?|gal\.?)(?=\s|$)/i],
+  ['ml', /^(ml|millilit(?:er|re)s?)(?=\s|$|\.)/i], ['l', /^(l|lit(?:er|re)s?)(?=\s|$)/i], ['kg', /^(kgs?|kilograms?)(?=\s|$|\.)/i], ['g', /^(g|grams?|gr)(?=\s|$|\.)/i],
+  ['lb', /^(lbs?\.?|pounds?)(?=\s|$)/i], ['oz', /^(oz\.?|ounces?)(?=\s|$)/i],
+  ['tbsp', /^(tbsp|tablespoon)s?/i], ['tsp', /^(tsp|teaspoon)s?/i]
+]
+const COUNT_UNITS = ['clove', 'can', 'stick', 'slice', 'pinch', 'dash', 'sprig', 'bunch', 'package', 'pkg', 'jar', 'head', 'piece', 'bag', 'box', 'packet', 'drop', 'handful', 'fillet', 'strip', 'rib', 'stalk', 'leaf', 'scoop']
+const COUNT_RE = new RegExp(`^(${COUNT_UNITS.join('|')})(es|s)?\\b\\.?`, 'i')
+const NUM = '(?:\\d+\\s+\\d+\\/\\d+|\\d+\\/\\d+|\\d*\\.\\d+|\\d+)?\\s*[¼½¾⅓⅔⅛⅜⅝⅞]?'
+const QTY_RE = new RegExp(`^(${NUM})(?:\\s*(?:-|–|to)\\s*(${NUM}))?\\s*`)
+export function parseLine(raw) {
+  const line = raw.replace(/\s+$/, '')
+  const m0 = line.match(/^(\s*(?:[-•*·]|\d+[.)](?=\s))?\s*)/)
+  const lead = m0 ? m0[1] : ''
+  let rest = line.slice(lead.length)
+  const m = rest.match(QTY_RE)
+  const q1 = m && m[1].trim() ? parseAmount(m[1]) : NaN
+  if (!m || !isFinite(q1)) return { raw, lead, qty: null, text: rest }
+  const q2 = m[2] && m[2].trim() ? parseAmount(m[2]) : null
+  rest = rest.slice(m[0].length)
+  let unit = null, unitText = '', kind = null
+  for (const [u, re] of U_ALIASES) { const um = rest.match(re); if (um) { unit = u; unitText = um[0]; kind = 'std'; break } }
+  let size = ''
+  if (!unit) {
+    const pm = rest.match(/^(\([^)]*\))\s*/)
+    const after = pm ? rest.slice(pm[0].length) : rest
+    const cm = after.match(COUNT_RE)
+    if (cm) { unit = cm[1].toLowerCase(); unitText = (pm ? pm[0] : '') + cm[0]; kind = 'count'; size = pm ? pm[1] : '' }
+  }
+  if (unit) rest = rest.slice(unitText.length).replace(/^\s*(of\s+)?/i, (s) => s)
+  return { raw, lead, qty: q1, qty2: isFinite(q2) ? q2 : null, unit, unitText, kind, size, text: size ? `${size} ${rest.trim()}` : rest }
+}
+const COUNT_PLURAL = { pinch: 'pinches', dash: 'dashes', bunch: 'bunches', box: 'boxes', leaf: 'leaves', pkg: 'pkg' }
+/* scale one parsed line; opts: { tidy, metric } -> { amount, text, changed } */
+export function scaleLine(p, k, { tidy = true, metric = false } = {}) {
+  if (p.qty == null) return { amount: '', text: p.text.trim(), plain: true }
+  const one = (q) => {
+    const v = q * k
+    if (p.kind === 'std') {
+      const U = UNITS[p.unit]
+      if (U.kind === 'vol') {
+        const ml = v * U.base
+        if (metric) return ml >= 1000 ? `${fmt(Math.round(ml / 10) / 100)} L` : `${fmt(ml >= 50 ? Math.round(ml / 5) * 5 : ml >= 10 ? Math.round(ml) : Math.round(ml * 2) / 2)} ml`
+        if (tidy && ['tsp', 'tbsp', 'cup', 'floz'].includes(p.unit)) return kitchenVolume(ml)
+        return `${kitchenCount(v)} ${v > 1 + 1e-9 ? U.short === 'L' ? 'L' : (p.unitText.trim().endsWith('s') || U.short.length <= 3 ? p.unitText.trim() : p.unitText.trim() + 's') : p.unitText.trim()}`
+      }
+      const g = v * U.base
+      if (metric || p.unit === 'g' || p.unit === 'kg') return g >= 1000 ? `${fmt(Math.round(g / 10) / 100)} kg` : `${fmt(g >= 20 ? Math.round(g) : Math.round(g * 10) / 10)} g`
+      if (tidy) { const oz = g / UNITS.oz.base; const r8 = oz % 8; return oz >= 32 || (oz >= 16 && (r8 < 0.3 || r8 > 7.7)) ? `${kitchenCount(oz / 16, 0.04)} lb` : `${kitchenCount(oz, 0.04)} oz` }
+      return `${kitchenCount(v)} ${p.unitText.trim()}`
+    }
+    if (p.kind === 'count') {
+      const word = v > 1 + 1e-9 ? (COUNT_PLURAL[p.unit] || p.unit + 's') : p.unit
+      return `${kitchenCount(v)} ${word}`
+    }
+    return kitchenCount(v, 0.08)
+  }
+  let amount = one(p.qty)
+  if (p.qty2 != null) {
+    const b = one(p.qty2)
+    const ua = amount.split(' ').slice(-1)[0], ub = b.split(' ').slice(-1)[0]
+    amount = ua === ub && /[a-z]/i.test(ua) ? `${amount.replace(new RegExp(` ${ua}$`), '')}–${b}` : `${amount}–${b}`
+  }
+  return { amount, text: p.text.trim(), egg: !p.unit && /\beggs?\b/i.test(p.text) && Math.abs(p.qty * k - Math.round(p.qty * k)) > 0.01 }
 }

@@ -57,5 +57,8 @@ Posts dated in the future stay hidden until their day, so posts can be queued ah
 - Kitchen converter: `../../tools/kitchen-converter/` (cups, tbsp, tsp, fl oz, ml, grams, ounces; ingredient-aware grams to cups).
 - Exact-amount pages: `../../tools/convert/<slug>/`, e.g. `8-cups-to-ounces`, `1-2-cup-to-ounces`, `100-grams-to-cups`, `tablespoons-in-1-1-2-cups`. Full list in `scripts/build-tools.mjs`.
 - Turkey calculator: `../../tools/turkey-calculator/`.
-- In any REF (conversion, substitution) or Thanksgiving/turkey post, link the matching tool once in the body. The site also adds a tool card automatically to REF and Thanksgiving posts.
+- Substitute finder: `../../tools/substitute-finder/`, plus one page per ingredient at `../../tools/substitute/<id>/` (ids in `scripts/tools/subs.js`, e.g. `heavy-cream`, `eggs`, `buttermilk`).
+- Recipe scaler: `../../tools/recipe-scaler/`. Link it from meal-prep, batch-cooking and serving-size posts.
+- Plan rows with status `covered-by-tool` are handled by a tool page. Never write them; treat them like `published`.
+- In any REF (conversion, substitution), meal-planning or Thanksgiving/turkey post, link the matching tool once in the body. When a post mentions swapping an ingredient that has a substitute page, link that page. The site also adds a tool card automatically to REF and Thanksgiving posts.
 - Do not write blog posts that target an exact-amount keyword already covered by a `/tools/convert/` page; link to that page instead.

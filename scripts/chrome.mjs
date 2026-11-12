@@ -56,8 +56,12 @@ ${scripts.map((s) => `<script type="module" src="${up}${s}"></script>`).join('\n
 
 /* Promo for the free tools, dropped into related blog posts. */
 export function toolCard(up, kind) {
-  const t = kind === 'turkey'
-    ? { href: 'tools/turkey-calculator/', e: '🦃', b: 'Free turkey calculator', p: 'Enter your guest count. Get the turkey size, thaw date, oven times and a timeline for the day.' }
-    : { href: 'tools/kitchen-converter/', e: '🥄', b: 'Free kitchen converter', p: 'Cups, spoons, ounces, ml and grams in one place, plus exactly which measuring cups and spoons to use.' }
+  const T = {
+    turkey: { href: 'tools/turkey-calculator/', e: '🦃', b: 'Free turkey calculator', p: 'Enter your guest count. Get the turkey size, thaw date, oven times and a timeline for the day.' },
+    converter: { href: 'tools/kitchen-converter/', e: '🥄', b: 'Free kitchen converter', p: 'Cups, spoons, ounces, ml and grams in one place, plus exactly which measuring cups and spoons to use.' },
+    substitute: { href: 'tools/substitute-finder/', e: '🔁', b: 'Free substitute finder', p: 'Out of an ingredient? Find a swap that works, scaled to exactly how much you need.' },
+    scaler: { href: 'tools/recipe-scaler/', e: '⚖️', b: 'Free recipe scaler', p: 'Paste any ingredient list, pick your servings and every amount resizes into easy measurements.' }
+  }
+  const t = T[kind] || T.converter
   return `<a class="toolcard" href="${up}${t.href}"><i>${t.e}</i><span><b>${t.b}</b><small>${t.p}</small></span><em>Open</em></a>`
 }

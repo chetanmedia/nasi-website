@@ -4,6 +4,7 @@
 import fs from 'node:fs'
 import path from 'node:path'
 import { head, nav, appCard, foot, esc, SITE, CFG } from './chrome.mjs'
+import { SUBS, SUB, CATS, swapParts, baseLabel, FIT, TAGS, titleKw } from './tools/subs.js'
 import { UNITS, VOL_UNITS, WT_UNITS, INGREDIENTS, ING, convert, fmt, niceFraction, asciiFraction, measureText, toMl, ROAST, sidesFor } from './tools/core.js'
 
 const ROOT = path.resolve(path.dirname(new URL(import.meta.url).pathname), '..')
@@ -310,21 +311,171 @@ function turkeyPage() {
 </main>` + foot(up, ['tools/turkey.js'])
 }
 
+/* ---------- substitute finder ---------- */
+const POPULAR = ['eggs', 'buttermilk', 'heavy-cream', 'baking-powder', 'brown-sugar', 'sour-cream', 'butter', 'worcestershire-sauce']
+const FILTERS = Object.entries(TAGS)
+function subWidget(id, main) {
+  const s = SUB[id]
+  const parts = (w) => swapParts(s, w, s.per[0])
+  const byCat = Object.entries(CATS).map(([k, n]) => [n, SUBS.filter((x) => x.cat === k)]).filter(([, a]) => a.length)
+  return `<section class="sb-app" data-ing="${id}" data-base="${main ? '../../' : '../../../'}"${main ? ' data-main' : ''}>
+  <div class="sb-top">
+    <div class="sb-search"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="m20 20-4-4" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg>
+      <input class="sb-q" type="search" placeholder="What are you out of?" autocomplete="off" aria-label="Search ingredients" role="combobox" aria-expanded="false">
+      <ul class="sb-list" role="listbox" hidden></ul></div>
+    <div class="sb-pop">${POPULAR.map((p) => `<button data-id="${p}">${SUB[p].e} ${esc(SUB[p].name.replace(/\s*\(.*\)/, ''))}</button>`).join('')}</div>
+    ${main ? '<div class="sb-recent" hidden><span class="lbl">Recently looked up</span><div></div></div>' : ''}
+  </div>
+  <div class="sb-head">
+    <span class="sb-emoji">${s.e}</span>
+    <div><p class="lbl">Out of</p>
+    <div class="sb-amt"><span>I need</span><button data-d="-1" aria-label="Less">−</button><input inputmode="decimal" value="${asciiFraction(s.per[0])}" aria-label="Amount"><button data-d="1" aria-label="More">+</button><span class="sb-unit">${s.unitName ? s.unitName[0] : s.per[1]}</span> <b class="sb-name"${s.unitName ? ' hidden' : ''}>${esc(s.name.toLowerCase().replace(/\s*\(.*\)/, ''))}</b></div>
+    <p class="sb-role">${esc(s.role)}</p></div>
+  </div>
+  <div class="sb-filters"><span class="lbl">I need it to be</span>${FILTERS.map(([t, n]) => `<button data-t="${t}">${n}</button>`).join('')}</div>
+  <div class="sb-cards in">${s.swaps.map((w, i) => `<article class="sb-card fit${w.fit}" style="--i:${i}"><header><b>${esc(w.name)}</b><span class="fit"><i></i><i></i><i></i>${FIT[w.fit]}</span></header><ul>${parts(w).map((p) => `<li>${p.fill ? `${esc(p.what)} <em>to make ${p.amt}</em>` : `<em>${p.amt}</em> ${esc(p.what)}`}</li>`).join('')}</ul><p class="how">${esc(w.how)}</p><footer><span class="best">Best for: ${esc(w.best)}</span>${(w.tags || []).map((t) => `<span class="tag">${TAGS[t]}</span>`).join('')}</footer></article>`).join('')}</div>
+  <p class="sb-avoid"${s.avoid ? '' : ' hidden'}>${esc(s.avoid || '')}</p>
+  <a class="sb-more" href="#" hidden>Full guide for this ingredient →</a>
+  <div class="sb-browse"><p class="lbl">Browse all ${SUBS.length} ingredients</p>${byCat.map(([n, a]) => `<div><b>${n}</b>${a.map((x) => `<a href="${main ? '../' : '../../'}substitute/${x.id}/" data-id="${x.id}">${x.e} ${esc(x.name)}</a>`).join('')}</div>`).join('')}</div>
+</section>`
+}
+function finderPage() {
+  const up = '../../'
+  const url = `${SITE}/tools/substitute-finder/`
+  const desc = `Free ingredient substitute finder: ${SUBS.length} ingredients and ${SUBS.reduce((a, s) => a + s.swaps.length, 0)} swaps with exact ratios scaled to your amount, plus vegan, dairy-free, egg-free and gluten-free filters.`
+  const faq = [
+    ['What can I use instead of eggs in baking?', 'For each egg, use a flax egg (1 tbsp ground flaxseed mixed with 3 tbsp water, rested 5 minutes), 3 tbsp aquafaba or ¼ cup unsweetened applesauce. Swaps work best in recipes with one or two eggs.'],
+    ['How do I make buttermilk?', 'Put 1 tablespoon of lemon juice or white vinegar in a measuring cup, add milk to make 1 cup, stir and let it rest 5 to 10 minutes.'],
+    ['What is a substitute for heavy cream?', 'For cooking and baking, mix ¾ cup whole milk with ¼ cup melted butter for each cup of heavy cream. It won’t whip; for whipping, chilled full-fat coconut cream works.'],
+    ['Can I use baking soda instead of baking powder?', 'Yes, with an acid. Mix ¼ teaspoon baking soda with ½ teaspoon cream of tartar to replace 1 teaspoon of baking powder.']
+  ]
+  return head({ title: 'Ingredient Substitute Finder: Swaps With Exact Ratios · Nasi', description: desc, url, image: `${SITE}/og.jpg`, up, css: ['tools/tools.css'], type: 'website', extra: ld(appLd('Nasi Substitute Finder', url, desc)) + ld(faqLd(faq)) + ld(crumbLd([['Home', SITE + '/'], ['Tools', SITE + '/tools/'], ['Substitute finder', url]])) }) + nav(up, 'tools') + `
+<main class="wrap tool subs">
+  <header class="thead"><p class="eyebrow">Free kitchen tool</p><h1>Substitute <em>finder</em></h1><p class="sub">Out of something halfway through a recipe? Find a swap that works, scaled to exactly how much you need.</p></header>
+  ${subWidget('eggs', true)}
+  <div class="tbody"><article class="prose rv">
+<h2>How do ingredient substitutions work?</h2>
+<p>A good swap does the same <strong>job</strong> as the original. Eggs bind and lift, buttermilk adds acid, cream adds fat. That’s why each swap above says what it’s best for: a substitute that’s perfect in a soup can fall flat in a cake.</p>
+<p>Savory cooking is forgiving, so most swaps work fine in soups, stews and sauces. Baking is chemistry, so stick to the ratios and swap only one ingredient at a time. For a printable overview, see our <a href="${up}blog/ingredient-substitution-chart/">ingredient substitution chart</a>.</p>
+  </article><aside class="tside">${appCard(up)}</aside></div>
+  ${faqHtml(faq)}
+</main>` + foot(up, ['tools/substitute.js'])
+}
+function subPage(s) {
+  const up = '../../../'
+  const url = `${SITE}/tools/substitute/${s.id}/`
+  const name = s.name.toLowerCase().replace(/\s*\(.*\)/, '')
+  const h1 = titleKw(s.kw)
+  const top = [...s.swaps].sort((a, b) => b.fit - a.fit)[0]
+  const p0 = (w) => swapParts(s, w, s.per[0]).map((p) => p.text).join(' + ')
+  const per = baseLabel(s, s.per[0])
+  const vegan = s.swaps.filter((w) => (w.tags || []).includes('vegan') || (w.tags || []).includes('dairy-free'))
+  const desc = `Out of ${name}? ${s.swaps.length} substitute${s.swaps.length > 1 ? 's' : ''} that work, with exact ratios. Best swap: ${p0(top)} for ${per}.`.slice(0, 158)
+  const faq = [
+    [`What can I use instead of ${name}?`, `${s.swaps.slice(0, 3).map((w) => `${w.name} (${p0(w)} for ${per})`).join('; ')}.`],
+    [`What is the best substitute for ${name}?`, `${top.name}: use ${p0(top)} for every ${per} of ${name}. ${top.how}`]
+  ]
+  if (vegan.length && !['milk'].includes(s.id)) faq.push([`Is there a dairy-free or vegan substitute for ${name}?`, `Yes. ${vegan.slice(0, 2).map((w) => `${w.name}: ${p0(w)}`).join('. ')}.`])
+  if (s.avoid) faq.push([`When shouldn’t I substitute ${name}?`, s.avoid])
+  const related = SUBS.filter((x) => x.cat === s.cat && x.id !== s.id).slice(0, 8)
+  const relLinks = [...related.map((r) => [`tools/substitute/${r.id}/`, `${r.e} ${titleKw(r.kw)}`]), ['tools/substitute-finder/', '🔁 All substitutes'], ['tools/kitchen-converter/', '🥄 Kitchen converter'], ['tools/recipe-scaler/', '⚖️ Recipe scaler']]
+  return head({ title: `${h1}: ${s.swaps.length > 1 ? `${s.swaps.length} Swaps That Work` : 'The Swap That Works'} · Nasi`, description: desc, url, image: `${SITE}/og.jpg`, up, css: ['tools/tools.css'], type: 'website', extra: ld(faqLd(faq)) + ld(crumbLd([['Home', SITE + '/'], ['Tools', SITE + '/tools/'], ['Substitute finder', SITE + '/tools/substitute-finder/'], [h1, url]])) }) + nav(up, 'tools') + `
+<main class="wrap tool subs">
+  <header class="thead small"><p class="crumbs"><a href="${up}tools/">Tools</a> <span>/</span> <a href="${up}tools/substitute-finder/">Substitute finder</a></p>
+    <h1>${esc(h1)}</h1>
+    <p class="answer">${per} ${esc(name)} = <em>${esc(p0(top))}</em></p>
+    <p class="sub">${esc(top.how)} Change the amount below and every swap rescales.</p></header>
+  ${subWidget(s.id, false)}
+  <div class="tbody"><article class="prose rv">
+<h2>What does ${esc(name)} do in a recipe?</h2>
+<p>${esc(s.role)}</p>
+<h2>Which ${esc(name)} substitute should I use?</h2>
+<div class="tbl"><table><thead><tr><th>Swap</th><th>For ${esc(per)} ${esc(name)}, use</th><th>Best for</th></tr></thead><tbody>
+${s.swaps.map((w) => `<tr><td>${esc(w.name)}<br><small>${FIT[w.fit]}</small></td><td>${esc(p0(w))}</td><td>${esc(w.best)}</td></tr>`).join('')}
+</tbody></table></div>
+${s.avoid ? `<p><strong>Good to know:</strong> ${esc(s.avoid)}</p>` : ''}
+<p>Keeping a recipe you changed? Save it in <a href="${up}">Nasi</a> and edit the ingredient list so next time you remember what worked.</p>
+  </article><aside class="tside">${appCard(up)}</aside></div>
+  ${faqHtml(faq)}
+  <section class="more rv"><h2>More swaps</h2><div class="links">${relLinks.map(([h, t]) => `<a href="${up}${h}">${esc(t)}</a>`).join('')}</div></section>
+</main>` + foot(up, ['tools/substitute.js'])
+}
+
+/* ---------- recipe scaler ---------- */
+const SAMPLE = `Creamy tomato pasta
+12 oz spaghetti
+2 tbsp olive oil
+3 cloves garlic, minced
+1 (28 oz) can crushed tomatoes
+1/2 cup heavy cream
+1/4 tsp red pepper flakes
+1 1/2 tsp salt
+1/3 cup grated Parmesan
+Fresh basil, to serve`
+function scalerPage() {
+  const up = '../../'
+  const url = `${SITE}/tools/recipe-scaler/`
+  const desc = 'Free recipe scaler: paste any ingredient list, choose your servings and every amount rescales into easy kitchen measurements. Double, halve or convert to metric.'
+  const faq = [
+    ['How do I scale a recipe?', 'Divide the servings you want by the servings the recipe makes to get a scale factor, then multiply every ingredient by it. For a recipe that serves 4 scaled to 6, multiply everything by 1½. This tool does the math and turns awkward results into measurements you can actually scoop.'],
+    ['Can I double any recipe?', 'Most savory dishes double well. Baking is trickier: bake extra pans of the original size instead of one deep pan, and check doneness rather than relying on the original time.'],
+    ['Should I scale salt and spices exactly?', 'Not always. Strong seasonings don’t always scale evenly in big batches. Add about three quarters of the scaled amount, then taste and adjust.'],
+    ['How do I use half an egg?', 'Beat the egg, then measure. One large egg is about 3 tablespoons, so half an egg is about 1½ tablespoons.']
+  ]
+  const sample = SAMPLE.split('\n').slice(1).join('\n')
+  return head({ title: 'Recipe Scaler: Double, Halve or Resize Any Recipe · Nasi', description: desc, url, image: `${SITE}/og.jpg`, up, css: ['tools/tools.css'], type: 'website', extra: ld(appLd('Nasi Recipe Scaler', url, desc)) + ld(faqLd(faq)) + ld(crumbLd([['Home', SITE + '/'], ['Tools', SITE + '/tools/'], ['Recipe scaler', url]])) }) + nav(up, 'tools') + `
+<main class="wrap tool scaler">
+  <header class="thead"><p class="eyebrow">Free kitchen tool</p><h1>Recipe <em>scaler</em></h1><p class="sub">Paste any ingredient list, pick how many you’re feeding, and every amount resizes into measurements you can actually scoop.</p></header>
+  <section class="rs-app" data-base="${up}">
+    <div class="rs-in">
+      <div class="rs-serv">
+        <label class="rs-from-l"><span class="lbl">Recipe makes</span><span class="rs-from-w"><input class="rs-from" inputmode="decimal" value="4" aria-label="Servings the recipe makes"> servings</span></label>
+        <div class="rs-want"><span class="lbl">I want</span><div class="rs-count"><button class="rs-step" data-d="-1" aria-label="Fewer">−</button><output class="rs-to">8</output><button class="rs-step" data-d="1" aria-label="More">+</button></div></div>
+      </div>
+      <div class="rs-mult"><span class="pill"></span>${[[0.5, '½×'], [1, '1×'], [1.5, '1½×'], [2, '2×'], [3, '3×'], [4, '4×']].map(([k, l]) => `<button data-k="${k}">${l}</button>`).join('')}</div>
+      <div class="cv-row"><span class="lbl">Ingredients</span><span class="hint">One per line. Paste from anywhere.</span></div>
+      <textarea class="rs-text" rows="11" spellcheck="false" aria-label="Ingredient list">${esc(sample)}</textarea>
+      <div class="rs-opts"><button class="tog on" data-o="tidy"><i></i>Tidy measurements</button><button class="tog" data-o="metric"><i></i>Metric</button><span></span><button class="rs-sample">Example</button><button class="rs-clear">Clear</button></div>
+    </div>
+    <div class="rs-out">
+      <p class="rs-sum"><b class="rs-k">2×</b><span class="rs-serves">Serves 8</span></p>
+      <ol class="rs-list"></ol>
+      <div class="rs-tips"></div>
+      <div class="cv-actions">
+        <button class="rs-copy"><svg viewBox="0 0 24 24"><rect x="8" y="8" width="12" height="12" rx="3" fill="none" stroke="currentColor" stroke-width="2"/><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2" fill="none" stroke="currentColor" stroke-width="2"/></svg><span>Copy list</span></button>
+        <button class="rs-share"><svg viewBox="0 0 24 24"><path d="M12 3v12M7 8l5-5 5 5M5 13v6a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Share</span></button>
+        <button class="rs-print"><svg viewBox="0 0 24 24"><path d="M7 9V3h10v6M7 17H5a2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2h-2M7 14h10v7H7z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg><span>Print</span></button>
+      </div>
+    </div>
+  </section>
+  <div class="tbody"><article class="prose rv">
+<h2>How do you scale a recipe?</h2>
+<p>Divide the servings you want by the servings the recipe makes. That’s your <strong>scale factor</strong>. Multiply every ingredient by it. A recipe for 4 scaled to 6 is 6 ÷ 4 = 1½, so 1 cup of stock becomes 1½ cups.</p>
+<p>The hard part is the awkward results. Halving ⅓ cup gives you ⅙ cup, which no measuring cup has. This scaler turns those into real scoops, like “2 tbsp + 2 tsp”, and moves you up to bigger units when amounts grow: 24 tablespoons becomes 1½ cups.</p>
+<h2>What doesn’t scale perfectly?</h2>
+<ul><li><strong>Seasoning:</strong> add about three quarters of the scaled salt and spice, then taste.</li><li><strong>Pans and pots:</strong> a doubled stew needs a bigger pot; a halved cake needs a smaller pan.</li><li><strong>Cooking time:</strong> bigger batches take longer to heat through, so check for doneness.</li><li><strong>Baking:</strong> bake extra pans of the original size instead of one deep pan.</li></ul>
+<p>Need to convert a measurement too? Try the <a href="${up}tools/kitchen-converter/">kitchen converter</a>. Missing an ingredient? The <a href="${up}tools/substitute-finder/">substitute finder</a> has a swap.</p>
+  </article><aside class="tside">${appCard(up)}</aside></div>
+  ${faqHtml(faq)}
+</main>` + foot(up, ['tools/scaler.js'])
+}
+
 /* ---------- hub ---------- */
 function hubPage() {
   const up = '../'
   const url = `${SITE}/tools/`
   const cards = [
     ['kitchen-converter/', '🥄', 'Kitchen converter', 'Cups, spoons, fluid ounces, ml and grams, with ingredient-aware weights and the exact scoops to use.', 'conv'],
-    ['turkey-calculator/', '🦃', 'Turkey calculator', 'Turkey size for your guests, thaw date, oven times and a full timeline you can add to your calendar.', 'turk']
+    ['turkey-calculator/', '🦃', 'Turkey calculator', 'Turkey size for your guests, thaw date, oven times and a full timeline you can add to your calendar.', 'turk'],
+    ['substitute-finder/', '🔁', 'Substitute finder', `Out of buttermilk, eggs or cream? ${SUBS.length} ingredients with swaps that work, scaled to your amount.`, 'turk'],
+    ['recipe-scaler/', '⚖️', 'Recipe scaler', 'Paste any recipe, pick your servings, and every amount resizes into easy kitchen measurements.', 'conv']
   ]
   return head({ title: 'Free Kitchen Tools · Nasi', description: 'Free kitchen tools from Nasi: a kitchen measurement converter and a Thanksgiving turkey calculator. No sign-up, works on your phone.', url, image: `${SITE}/og.jpg`, up, css: ['tools/tools.css'], type: 'website' }) + nav(up, 'tools') + `
 <main class="wrap tool hub">
   <header class="thead"><p class="eyebrow">Free kitchen tools</p><h1>Little tools for <em>busy kitchens</em></h1><p class="sub">Quick answers while your hands are covered in flour. No sign-up, works great on your phone.</p></header>
   <section class="hubgrid">
     ${cards.map(([h, e, b, p, c]) => `<a class="hcard ${c}" href="${up}tools/${h}"><i>${e}</i><b>${b}</b><p>${p}</p><em>Open tool →</em></a>`).join('')}
-    <div class="hcard soon"><i>🔁</i><b>Substitute finder</b><p>Out of buttermilk? Find a swap with the right ratio.</p><em>Coming soon</em></div>
-    <div class="hcard soon"><i>⚖️</i><b>Recipe scaler</b><p>Paste a recipe, pick your servings and every amount adjusts.</p><em>Coming soon</em></div>
+
   </section>
   <section class="pop rv"><h2>Quick conversions</h2><div class="links">${pages.filter((_, i) => i % 3 === 0).slice(0, 18).map((r) => `<a href="${up}tools/convert/${r.slug}/">${esc(r.short)}</a>`).join('')}</div></section>
   ${appCard(up, 'wide')}
@@ -333,11 +484,14 @@ function hubPage() {
 
 /* ---------- write ---------- */
 fs.mkdirSync(OUT, { recursive: true })
-for (const f of ['core.js', 'converter.js', 'turkey.js', 'tools.css']) fs.copyFileSync(path.join(ROOT, 'scripts/tools', f), path.join(OUT, f))
+for (const f of ['core.js', 'subs.js', 'converter.js', 'turkey.js', 'substitute.js', 'scaler.js', 'tools.css']) fs.copyFileSync(path.join(ROOT, 'scripts/tools', f), path.join(OUT, f))
 write('', hubPage())
 write('kitchen-converter', converterPage())
 write('turkey-calculator', turkeyPage())
 for (const p of pages) write(`convert/${p.slug}`, amountPage(p))
+write('substitute-finder', finderPage())
+for (const s of SUBS) write(`substitute/${s.id}`, subPage(s))
+write('recipe-scaler', scalerPage())
 
 /* sitemap: add tool URLs */
 const sm = path.join(ROOT, 'dist/sitemap.xml')
