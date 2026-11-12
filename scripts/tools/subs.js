@@ -83,7 +83,7 @@ export const SUBS = [
     { name: 'All-purpose flour, baking powder and salt', parts: [[1, 'cup', 'all-purpose flour'], [1.5, 'tsp', 'baking powder'], [0.25, 'tsp', 'salt']], fit: 3, best: 'Biscuits, pancakes, quick breads', how: 'Whisk together well before using.', tags: ['vegan'] }
   ] },
   { id: 'cake-flour', name: 'Cake flour', e: '🎂', cat: 'baking', per: [1, 'cup'], kw: 'substitute for cake flour', role: 'Cake flour is low in protein, so cakes come out soft and fine-crumbed.', swaps: [
-    { name: 'All-purpose flour and cornstarch', parts: [[0.875, 'cup', 'all-purpose flour (1 cup minus 2 tbsp)'], [2, 'tbsp', 'cornstarch']], fit: 3, best: 'Cakes, cupcakes', how: 'Sift together twice so the cornstarch is evenly mixed.', tags: ['vegan'] }
+    { name: 'All-purpose flour and cornstarch', parts: [[0.875, 'cup', 'all-purpose flour'], [2, 'tbsp', 'cornstarch']], fit: 3, best: 'Cakes, cupcakes', how: 'Measure 1 cup of flour, take out 2 tbsp, add 2 tbsp cornstarch and sift together twice.', tags: ['vegan'] }
   ] },
   { id: 'cornstarch', name: 'Cornstarch (to thicken)', e: '🌽', cat: 'baking', per: [1, 'tbsp'], kw: 'substitute for cornstarch', role: 'Cornstarch thickens sauces, gravies and fillings and turns glossy when cooked.', swaps: [
     { name: 'All-purpose flour', parts: [[2, 'tbsp', 'all-purpose flour']], fit: 3, best: 'Gravies, stews, sauces', how: 'Use twice as much and simmer a few minutes to cook out the raw taste. Less glossy.', tags: ['vegan'] },

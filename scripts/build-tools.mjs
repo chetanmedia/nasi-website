@@ -366,14 +366,14 @@ function subPage(s) {
   const url = `${SITE}/tools/substitute/${s.id}/`
   const name = s.name.toLowerCase().replace(/\s*\(.*\)/, '')
   const h1 = titleKw(s.kw)
-  const top = [...s.swaps].sort((a, b) => b.fit - a.fit)[0]
+  const top = s.swaps[0]
   const p0 = (w) => swapParts(s, w, s.per[0]).map((p) => p.text).join(' + ')
   const per = baseLabel(s, s.per[0])
   const vegan = s.swaps.filter((w) => (w.tags || []).includes('vegan') || (w.tags || []).includes('dairy-free'))
   const desc = `Out of ${name}? ${s.swaps.length} substitute${s.swaps.length > 1 ? 's' : ''} that work, with exact ratios. Best swap: ${p0(top)} for ${per}.`.slice(0, 158)
   const faq = [
     [`What can I use instead of ${name}?`, `${s.swaps.slice(0, 3).map((w) => `${w.name} (${p0(w)} for ${per})`).join('; ')}.`],
-    [`What is the best substitute for ${name}?`, `${top.name}: use ${p0(top)} for every ${per} of ${name}. ${top.how}`]
+    [`What is the best substitute for ${name}?`, `${top.name}: use ${p0(top)} for every ${per}${s.unitName ? '' : ` of ${name}`}. ${top.how}`]
   ]
   if (vegan.length && !['milk'].includes(s.id)) faq.push([`Is there a dairy-free or vegan substitute for ${name}?`, `Yes. ${vegan.slice(0, 2).map((w) => `${w.name}: ${p0(w)}`).join('. ')}.`])
   if (s.avoid) faq.push([`When shouldn’t I substitute ${name}?`, s.avoid])
@@ -383,14 +383,14 @@ function subPage(s) {
 <main class="wrap tool subs">
   <header class="thead small"><p class="crumbs"><a href="${up}tools/">Tools</a> <span>/</span> <a href="${up}tools/substitute-finder/">Substitute finder</a></p>
     <h1>${esc(h1)}</h1>
-    <p class="answer">${per} ${esc(name)} = <em>${esc(p0(top))}</em></p>
+    <p class="answer">${per}${s.unitName ? '' : ' ' + esc(name)} = <em>${esc(p0(top))}</em></p>
     <p class="sub">${esc(top.how)} Change the amount below and every swap rescales.</p></header>
   ${subWidget(s.id, false)}
   <div class="tbody"><article class="prose rv">
 <h2>What does ${esc(name)} do in a recipe?</h2>
 <p>${esc(s.role)}</p>
 <h2>Which ${esc(name)} substitute should I use?</h2>
-<div class="tbl"><table><thead><tr><th>Swap</th><th>For ${esc(per)} ${esc(name)}, use</th><th>Best for</th></tr></thead><tbody>
+<div class="tbl"><table><thead><tr><th>Swap</th><th>For ${esc(per)}${s.unitName ? '' : ' ' + esc(name)}, use</th><th>Best for</th></tr></thead><tbody>
 ${s.swaps.map((w) => `<tr><td>${esc(w.name)}<br><small>${FIT[w.fit]}</small></td><td>${esc(p0(w))}</td><td>${esc(w.best)}</td></tr>`).join('')}
 </tbody></table></div>
 ${s.avoid ? `<p><strong>Good to know:</strong> ${esc(s.avoid)}</p>` : ''}
