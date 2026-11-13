@@ -10,3 +10,4 @@
 - 2026-11-12 | how-to-save-recipes-on-tiktok | How to Save Recipes From TikTok (3 Ways, Including One That Never Breaks) | ~1550 words | how to save recipes on tiktok
 - 2026-11-12 | thanksgiving-recipes-for-appetizers | Thanksgiving Appetizers | ~1160 words | thanksgiving recipes for appetizers (catch-up)
 - 2026-11-12 | thanksgiving-recipes-brussel-sprouts | Thanksgiving Brussels Sprouts Recipes | ~1090 words | thanksgiving recipes brussel sprouts (catch-up)
+- 2026-11-13 | yam-thanksgiving-recipes | Sweet Potato and Yam Recipes for Thanksgiving | ~1460 words | yam thanksgiving recipes
