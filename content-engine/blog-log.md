@@ -11,3 +11,4 @@
 - 2026-11-12 | thanksgiving-recipes-for-appetizers | Thanksgiving Appetizers | ~1160 words | thanksgiving recipes for appetizers (catch-up)
 - 2026-11-12 | thanksgiving-recipes-brussel-sprouts | Thanksgiving Brussels Sprouts Recipes | ~1090 words | thanksgiving recipes brussel sprouts (catch-up)
 - 2026-11-13 | yam-thanksgiving-recipes | Sweet Potato and Yam Recipes for Thanksgiving | ~1460 words | yam thanksgiving recipes
+- 2026-11-13 | recipe-app-best | The Best Recipe Apps, Ranked by Home Cooks Who Save From Social | ~2010 words | recipe app best (catch-up)
