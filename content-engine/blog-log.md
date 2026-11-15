@@ -15,3 +15,4 @@
 - 2026-11-14 | meal-prep-ideas-recipes | Meal Prep Ideas: 30 Recipes That Reheat Well | ~1300 words | meal prep ideas recipes
 - 2026-11-14 | what-to-make-with-ingredients-i-have | What to Make With the Ingredients You Already Have | ~1450 words | what to make with ingredients i have (catch-up)
 - 2026-11-15 | southern-thanksgiving-recipes-most-saved | The Most-Saved Southern Thanksgiving Recipes | ~1290 words | southern thanksgiving recipes most saved
+- 2026-11-15 | make-a-family-recipe-book | How to Make a Family Recipe Book (Digital and Printed) | ~1560 words | make a family recipe book (catch-up)
