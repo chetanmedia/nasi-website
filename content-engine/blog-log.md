@@ -17,3 +17,4 @@
 - 2026-11-15 | southern-thanksgiving-recipes-most-saved | The Most-Saved Southern Thanksgiving Recipes | ~1290 words | southern thanksgiving recipes most saved
 - 2026-11-15 | make-a-family-recipe-book | How to Make a Family Recipe Book (Digital and Printed) | ~1560 words | make a family recipe book (catch-up)
 - 2026-11-16 | potato-and-leek-soup-recipes | Potato Leek Soup (and 4 Twists) | ~1530 words | potato and leek soup recipes
+- 2026-11-16 | thanksgiving-recipes-casserole | Thanksgiving Casseroles | ~1260 words | thanksgiving recipes casserole (catch-up)
