@@ -19,3 +19,5 @@
 - 2026-11-16 | potato-and-leek-soup-recipes | Potato Leek Soup (and 4 Twists) | ~1530 words | potato and leek soup recipes
 - 2026-11-16 | thanksgiving-recipes-casserole | Thanksgiving Casseroles | ~1260 words | thanksgiving recipes casserole (catch-up)
 - 2026-11-17 | recipe-organizer-app-free | The Best Free Recipe Organizer Apps (Tested Side by Side) | ~2050 words | recipe organizer app free
+- 2026-11-17 | apps-like-recime | Best ReciMe Alternatives for Saving Social Media Recipes | ~1580 words | apps like recime (catch-up)
+- 2026-11-17 | how-many-cups-to-ounces | Cups to Ounces: Liquid and Dry Conversion Chart | ~1050 words | how many cups to ounces (catch-up)
