@@ -22,3 +22,5 @@
 - 2026-11-17 | apps-like-recime | Best ReciMe Alternatives for Saving Social Media Recipes | ~1580 words | apps like recime (catch-up)
 - 2026-11-17 | how-many-cups-to-ounces | Cups to Ounces: Liquid and Dry Conversion Chart | ~1050 words | how many cups to ounces (catch-up)
 - 2026-11-18 | using-leftover-turkey-recipes | Leftover Turkey Recipes | ~1280 words | using leftover turkey recipes
+- 2026-11-18 | meal-prep-ideas-for-breakfast | Breakfast Meal Prep Ideas for Busy Weekdays | ~1060 words | meal prep ideas for breakfast (catch-up)
+- 2026-11-18 | canva-recipe-card-template | Canva Recipe Card Template: Step by Step | ~1030 words | canva recipe card template (catch-up)
