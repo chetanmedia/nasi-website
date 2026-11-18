@@ -21,3 +21,4 @@
 - 2026-11-17 | recipe-organizer-app-free | The Best Free Recipe Organizer Apps (Tested Side by Side) | ~2050 words | recipe organizer app free
 - 2026-11-17 | apps-like-recime | Best ReciMe Alternatives for Saving Social Media Recipes | ~1580 words | apps like recime (catch-up)
 - 2026-11-17 | how-many-cups-to-ounces | Cups to Ounces: Liquid and Dry Conversion Chart | ~1050 words | how many cups to ounces (catch-up)
+- 2026-11-18 | using-leftover-turkey-recipes | Leftover Turkey Recipes | ~1280 words | using leftover turkey recipes
