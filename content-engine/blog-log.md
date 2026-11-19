@@ -25,3 +25,5 @@
 - 2026-11-18 | meal-prep-ideas-for-breakfast | Breakfast Meal Prep Ideas for Busy Weekdays | ~1060 words | meal prep ideas for breakfast (catch-up)
 - 2026-11-18 | canva-recipe-card-template | Canva Recipe Card Template: Step by Step | ~1030 words | canva recipe card template (catch-up)
 - 2026-11-19 | soup-recipes-vegetable-beef | Vegetable Beef Soup Recipes | ~1710 words | soup recipes vegetable beef
+- 2026-11-19 | leftover-turkey-recipes-pot-pie | Leftover Turkey Pot Pie and Casseroles | ~1030 words | leftover turkey recipes pot pie (catch-up)
+- 2026-11-19 | how-to-save-recipes-on-instagram | How to Save Recipes From Instagram Reels So You Can Actually Cook Them | ~990 words | how to save recipes on instagram (catch-up)
