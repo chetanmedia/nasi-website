@@ -24,3 +24,4 @@
 - 2026-11-18 | using-leftover-turkey-recipes | Leftover Turkey Recipes | ~1280 words | using leftover turkey recipes
 - 2026-11-18 | meal-prep-ideas-for-breakfast | Breakfast Meal Prep Ideas for Busy Weekdays | ~1060 words | meal prep ideas for breakfast (catch-up)
 - 2026-11-18 | canva-recipe-card-template | Canva Recipe Card Template: Step by Step | ~1030 words | canva recipe card template (catch-up)
+- 2026-11-19 | soup-recipes-vegetable-beef | Vegetable Beef Soup Recipes | ~1710 words | soup recipes vegetable beef
