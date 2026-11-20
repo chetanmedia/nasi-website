@@ -28,3 +28,5 @@
 - 2026-11-19 | leftover-turkey-recipes-pot-pie | Leftover Turkey Pot Pie and Casseroles | ~1030 words | leftover turkey recipes pot pie (catch-up)
 - 2026-11-19 | how-to-save-recipes-on-instagram | How to Save Recipes From Instagram Reels So You Can Actually Cook Them | ~990 words | how to save recipes on instagram (catch-up)
 - 2026-11-20 | is-recime-app-free | Is ReciMe Free? ReciMe Cost, Plans and Limits Explained | ~1960 words | is recime app free
+- 2026-11-20 | meal-prep-ideas-high-protein | High-Protein Meal Prep Ideas | ~1170 words | meal prep ideas high protein (catch-up)
+- 2026-11-20 | christmas-cookies-easy | Easy Christmas Cookies (Tested for Beginners) | ~940 words | christmas cookies easy (catch-up)
