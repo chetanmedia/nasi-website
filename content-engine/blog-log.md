@@ -31,3 +31,5 @@
 - 2026-11-20 | meal-prep-ideas-high-protein | High-Protein Meal Prep Ideas | ~1170 words | meal prep ideas high protein (catch-up)
 - 2026-11-20 | christmas-cookies-easy | Easy Christmas Cookies (Tested for Beginners) | ~940 words | christmas cookies easy (catch-up)
 - 2026-11-21 | how-many-tablespoons-in-1-4-c | How Many Tablespoons in 1/4 Cup? | ~1110 words | how many tablespoons in 1/4 c
+- 2026-11-21 | easy-soup-recipes-chicken | Easy Chicken Soup Recipes | ~1250 words | easy soup recipes chicken (catch-up)
+- 2026-11-21 | christmas-dinner-ideas | Christmas Dinner Ideas: Menus for Every Size Table | ~1050 words | christmas dinner ideas (catch-up)
