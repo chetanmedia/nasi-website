@@ -209,7 +209,7 @@
     "primary_keyword": "substitute for",
     "volume": 1900,
     "sd": 38,
-    "cpc": 0.0,
+    "cpc": 0,
     "secondary_keywords": [
       {
         "kw": "substitute for egg",
@@ -579,7 +579,7 @@
     "primary_keyword": "thanksgiving recipes in crockpot",
     "volume": 1600,
     "sd": 6,
-    "cpc": 0.0,
+    "cpc": 0,
     "secondary_keywords": [
       {
         "kw": "thanksgiving recipes in a crockpot",
@@ -734,7 +734,7 @@
     "primary_keyword": "southern thanksgiving recipes most saved",
     "volume": 1600,
     "sd": 24,
-    "cpc": 0.0,
+    "cpc": 0,
     "secondary_keywords": [],
     "secondary_volume": 0,
     "nasi_feature": "Searchable cookbook & collections",
@@ -1406,7 +1406,7 @@
       "is-recime-app-free"
     ],
     "word_count": 1800,
-    "status": "planned"
+    "status": "published"
   },
   {
     "day": 38,
@@ -1460,7 +1460,7 @@
     "primary_keyword": "recime vs paprika",
     "volume": 140,
     "sd": 34,
-    "cpc": 0.0,
+    "cpc": 0,
     "secondary_keywords": [
       {
         "kw": "paprika vs recime",
@@ -1812,7 +1812,7 @@
     "primary_keyword": "recime vs recipe keeper",
     "volume": 70,
     "sd": 20,
-    "cpc": 0.0,
+    "cpc": 0,
     "secondary_keywords": [
       {
         "kw": "recipe keeper vs recime",
@@ -1848,7 +1848,7 @@
     "primary_keyword": "what to make for dinner christmas eve",
     "volume": 320,
     "sd": 31,
-    "cpc": 0.0,
+    "cpc": 0,
     "secondary_keywords": [],
     "secondary_volume": 0,
     "nasi_feature": "Weekly meal planner",
@@ -2305,7 +2305,7 @@
     "primary_keyword": "recipe keeper vs paprika",
     "volume": 110,
     "sd": 34,
-    "cpc": 0.0,
+    "cpc": 0,
     "secondary_keywords": [
       {
         "kw": "paprika vs recipe keeper",
@@ -3159,7 +3159,7 @@
     "primary_keyword": "how to print pinterest recipes",
     "volume": 70,
     "sd": 29,
-    "cpc": 0.0,
+    "cpc": 0,
     "secondary_keywords": [
       {
         "kw": "pinterest recipes",
@@ -3753,7 +3753,7 @@
     "primary_keyword": "romantic valentines dinner",
     "volume": 480,
     "sd": 14,
-    "cpc": 0.0,
+    "cpc": 0,
     "secondary_keywords": [
       {
         "kw": "valentines dinner for two recipes",
@@ -4660,7 +4660,7 @@
     "primary_keyword": "how many tablespoons in one oz",
     "volume": 90500,
     "sd": 51,
-    "cpc": 0.0,
+    "cpc": 0,
     "secondary_keywords": [],
     "secondary_volume": 0,
     "nasi_feature": "Serving scaler",
@@ -4762,7 +4762,7 @@
     "primary_keyword": "pantry staples for cheap meals",
     "volume": 1000,
     "sd": 30,
-    "cpc": 0.0,
+    "cpc": 0,
     "secondary_keywords": [
       {
         "kw": "cheap pantry staples",
@@ -4834,7 +4834,7 @@
     "primary_keyword": "easter dinner ideas easy",
     "volume": 1600,
     "sd": 34,
-    "cpc": 0.0,
+    "cpc": 0,
     "secondary_keywords": [
       {
         "kw": "casual easter dinner ideas",
@@ -4983,7 +4983,7 @@
     "primary_keyword": "inexpensive easter dinner ideas",
     "volume": 720,
     "sd": 36,
-    "cpc": 0.0,
+    "cpc": 0,
     "secondary_keywords": [
       {
         "kw": "easter dinner ideas cheap",
@@ -5090,7 +5090,7 @@
     "primary_keyword": "no ham easter dinner ideas",
     "volume": 480,
     "sd": 26,
-    "cpc": 0.0,
+    "cpc": 0,
     "secondary_keywords": [
       {
         "kw": "non traditional easter dinner ideas",
@@ -5234,7 +5234,7 @@
     "primary_keyword": "easy easter dinner ideas for a crowd",
     "volume": 50,
     "sd": 18,
-    "cpc": 0.0,
+    "cpc": 0,
     "secondary_keywords": [
       {
         "kw": "easter dinner ideas for a crowd",
@@ -5678,7 +5678,7 @@
     "primary_keyword": "pantry staples for one person",
     "volume": 210,
     "sd": 9,
-    "cpc": 0.0,
+    "cpc": 0,
     "secondary_keywords": [
       {
         "kw": "pantry staples for budget meals",
