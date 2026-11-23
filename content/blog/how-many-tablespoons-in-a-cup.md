@@ -2,6 +2,7 @@
 title: How Many Tablespoons in a Cup? (Quick Chart)
 description: There are 16 tablespoons in a cup. Here is a quick chart for 1/4, 1/3, 1/2 and 3/4 cup, plus teaspoons, fluid ounces and milliliters.
 date: 2026-10-27
+updated: 2026-11-23
 cluster: REF
 cover: tofu
 keywords: [how many tablespoons in a cup, how many tablespoons in 1/4 cup, how many tablespoons in 1/3 cup, teaspoons to tablespoons]
@@ -22,6 +23,8 @@ faq:
 
 | Cups | Tablespoons | Teaspoons | Fluid ounces | Milliliters (approx.) |
 |---|---|---|---|---|
+| 2 1/2 cups | 40 tbsp | 120 tsp | 20 fl oz | 591 ml |
+| 1 1/2 cups | 24 tbsp | 72 tsp | 12 fl oz | 355 ml |
 | 1 cup | 16 tbsp | 48 tsp | 8 fl oz | 237 ml |
 | 3/4 cup | 12 tbsp | 36 tsp | 6 fl oz | 177 ml |
 | 2/3 cup | 10 tbsp + 2 tsp | 32 tsp | 5.3 fl oz | 158 ml |
@@ -30,6 +33,8 @@ faq:
 | 1/4 cup | 4 tbsp | 12 tsp | 2 fl oz | 59 ml |
 | 1/8 cup | 2 tbsp | 6 tsp | 1 fl oz | 30 ml |
 | 1/16 cup | 1 tbsp | 3 tsp | 0.5 fl oz | 15 ml |
+
+Need one exact amount? See [how many tablespoons are in 1 1/2 cups](../../tools/convert/tablespoons-in-1-1-2-cups/), or check [2 1/2 cups to ounces](../../tools/convert/2-1-2-cups-to-ounces/) and [1 1/2 cups to ounces](../../tools/convert/1-1-2-cups-to-ounces/).
 
 ## The three numbers worth memorising
 
