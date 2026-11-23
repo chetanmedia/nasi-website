@@ -37,3 +37,5 @@
 - 2026-11-22 | best-of-christmas-cookies | The Best Christmas Cookies, Ranked | ~1000 words | best of christmas cookies (catch-up)
 - 2026-11-22 | recime-vs-paprika | ReciMe vs Paprika: Which Recipe App Fits How You Cook? | ~1000 words | recime vs paprika (catch-up)
 - 2026-11-23 | christmas-dinner-ideas-sides | Christmas Side Dishes | ~1600 words | christmas dinner ideas sides
+- 2026-11-23 | how-many-tablespoons-in-1-3-cup | How Many Tablespoons in 1/3 Cup? | ~1050 words | how many tablespoons in 1/3 cup (catch-up)
+- 2026-11-23 | christmas-cookies-italian | Italian Christmas Cookies | ~1250 words | christmas cookies italian (catch-up)
