@@ -78,13 +78,13 @@ const pages = []
 for (const c of CUPS_OZ) {
   const word = c <= 1 ? 'Cup' : 'Cups'
   const t = asciiFraction(c)
-  pages.push({ kind: 'cups-oz', a: c, slug: `${slugAmt(c)}-${c <= 1 ? 'cup' : 'cups'}-to-ounces`, title: `${t} ${word} to Ounces`, short: `${t} ${word.toLowerCase()} → oz`, from: 'cup', to: 'floz' })
+  pages.push({ kind: 'cups-oz', a: c, slug: `${slugAmt(c)}-${c <= 1 ? 'cup' : 'cups'}-to-ounces`, title: `${t} ${word} to Ounces`, h1: `How Many Ounces Is ${t} ${word}?`, seo: `How Many Ounces Is ${t} ${word}? Liquid and Dry Chart`, short: `${t} ${word.toLowerCase()} → oz`, from: 'cup', to: 'floz' })
 }
 for (const c of TBSP_IN) {
   const t = asciiFraction(c)
-  pages.push({ kind: 'tbsp-in', a: c, slug: `tablespoons-in-${slugAmt(c)}-${c <= 1 ? 'cup' : 'cups'}`, title: `How Many Tablespoons in ${t} ${c <= 1 ? 'Cup' : 'Cups'}?`, short: `Tbsp in ${t} cup${c > 1 ? 's' : ''}`, from: 'cup', to: 'tbsp' })
+  pages.push({ kind: 'tbsp-in', a: c, slug: `tablespoons-in-${slugAmt(c)}-${c <= 1 ? 'cup' : 'cups'}`, title: `How Many Tablespoons in ${t} ${c <= 1 ? 'Cup' : 'Cups'}?`, seo: `How Many Tablespoons in ${t} ${c <= 1 ? 'Cup' : 'Cups'}? Quick Answer + Chart`, short: `Tbsp in ${t} cup${c > 1 ? 's' : ''}`, from: 'cup', to: 'tbsp' })
 }
-for (const g of GRAMS) pages.push({ kind: 'g-cups', a: g, slug: `${g}-grams-to-cups`, title: `${g} Grams to Cups`, short: `${g} g → cups`, from: 'g', to: 'cup', ing: 'flour' })
+for (const g of GRAMS) pages.push({ kind: 'g-cups', a: g, slug: `${g}-grams-to-cups`, title: `${g} Grams to Cups`, seo: `${g} Grams to Cups: Flour, Sugar, Butter and More`, short: `${g} g → cups`, from: 'g', to: 'cup', ing: 'flour' })
 
 function nearby(p) {
   const same = pages.filter((x) => x.kind === p.kind && x.slug !== p.slug)
@@ -162,11 +162,11 @@ ${rows.map((r) => `<tr><td>${ING[r.i].e} ${ING[r.i].name}</td><td>${fmt(r.c)} cu
     ]
   }
   const rel = nearby(p)
-  return head({ title: `${p.title} · Nasi Kitchen Converter`, description: desc, url, image: `${SITE}/og.jpg`, up, css: ['tools/tools.css'], type: 'website', extra: ld(faqLd(faq)) + ld(crumbLd([['Home', SITE + '/'], ['Tools', SITE + '/tools/'], ['Kitchen converter', SITE + '/tools/kitchen-converter/'], [p.title, url]])) }) + nav(up, 'tools') + `
+  return head({ title: `${p.seo || p.title} · Nasi`, description: desc, url, image: `${SITE}/og.jpg`, up, css: ['tools/tools.css'], type: 'website', extra: ld(faqLd(faq)) + ld(crumbLd([['Home', SITE + '/'], ['Tools', SITE + '/tools/'], ['Kitchen converter', SITE + '/tools/kitchen-converter/'], [p.title, url]])) }) + nav(up, 'tools') + `
 <main class="wrap tool">
   <header class="thead small">
     <p class="crumbs"><a href="${up}tools/">Tools</a> <span>/</span> <a href="${up}tools/kitchen-converter/">Kitchen converter</a></p>
-    <h1>${esc(p.title)}</h1>
+    <h1>${esc(p.h1 || p.title)}</h1>
     <p class="answer">${answer}</p>
     <p class="sub">${sub}</p>
   </header>
