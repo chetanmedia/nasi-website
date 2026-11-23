@@ -46,7 +46,9 @@ Posts dated in the future stay hidden until their day, so posts can be queued ah
 
 ## Daily run checklist
 1. Pick the row and run a quick SERP check on the primary keyword.
-2. Write `content/blog/{slug}.md`, then run `npm run build` locally to catch errors.
+2. Write `content/blog/{slug}.md`.
+2b. **Link to the new post from older posts (required every run).** For every new post written today, catch-up posts included, pick 2 or 3 older posts in `content/blog/` on closely related topics (same cluster first) that do not already link to the new slug. In each, add one natural sentence, or extend an existing one, with a descriptive link `[words that describe the new post](../{new-slug}/)` in the body where it genuinely helps the reader (not in the front matter or FAQ). Do not change their title, date, description, cover or any other front matter, and do not rewrite other text. Commit these edits with the new post and list the edited posts in the run report.
+2c. Run `npm run build` locally to catch errors, and confirm each edited older post builds and contains the new link.
 3. Set the row's `status` to `"published"` in the plan JSON.
 4. Commit both files and push. Netlify deploys.
 
