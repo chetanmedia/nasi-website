@@ -1,10 +1,11 @@
 ---
-title: Sweet Potato and Yam Recipes for Thanksgiving
+title: "Yam Recipes for Thanksgiving: 24 Sweet and Savory Sides"
 description: Yam Thanksgiving recipes and sweet potato sides for every table. 24 ideas, from classic casserole to savory mash, plus make-ahead tips and how much to buy.
 date: 2026-11-13
+updated: 2026-11-23
 cluster: SEAS
 cover: mango
-keywords: [yam thanksgiving recipes, thanksgiving recipes with sweet potato, candied yams thanksgiving, sweet potato casserole, make ahead sweet potatoes]
+keywords: [yam thanksgiving recipes, yam recipes for thanksgiving, savory yams for thanksgiving, yams or sweet potatoes for thanksgiving, thanksgiving recipes with sweet potato, candied yams thanksgiving, sweet potato casserole, make ahead sweet potatoes]
 faq:
   - q: Are yams and sweet potatoes the same thing?
     a: Not botanically. True yams are starchy, rough-skinned tubers sold mostly in international markets. The orange "yams" in most US grocery stores are actually soft, orange-fleshed sweet potatoes, so any recipe here works with either label.
@@ -70,6 +71,17 @@ If your table already has two casseroles, try something brighter.
 18. **Coconut mashed sweet potatoes.** Coconut milk instead of dairy, with a little ginger. Naturally dairy-free.
 19. **Smashed sweet potatoes with feta and herbs.** Boil small ones, smash them flat, roast until crisp and finish with crumbled feta.
 20. **Sweet potato rolls.** Mashed sweet potato in the dough makes soft, golden dinner rolls.
+
+## What is the easiest yam dish to make on Thanksgiving Day?
+
+If it is Thanksgiving week and nothing is planned yet, stovetop candied yams are the safest bet. They need one pot, about 30 minutes and no oven space.
+
+1. **Pick your yams.** Use two 29-ounce cans of cut yams, drained, or about 3 pounds (1.4 kg) of fresh sweet potatoes, peeled and cut into thick rounds.
+2. **Make a quick glaze.** Melt butter in a wide pan, then stir in brown sugar, a pinch of salt, and cinnamon or nutmeg if you like.
+3. **Simmer.** Add the yams and simmer gently, spooning the glaze over them. Canned yams only need 10 to 15 minutes to heat through. Fresh rounds need 20 to 30 minutes, covered for the first half, until a knife slides in easily.
+4. **Finish.** Uncover and let the glaze thicken for a few minutes. Taste before adding more sugar, especially with canned yams packed in syrup.
+
+Want them savory instead? Skip the sugar, cook the yams in butter with garlic and thyme, and finish with flaky salt and a squeeze of orange.
 
 ## Which sweet potato recipes free up the oven?
 
