@@ -92,7 +92,7 @@ Most people use a mix: bookmark everything that looks good, then save the ones y
 
 ## Can you use the same method for TikTok and Facebook?
 
-Yes. The same idea works on every app: bookmarks are for browsing, written recipes are for cooking. Our guide to [saving recipes on TikTok](../how-to-save-recipes-on-tiktok/) covers Favorites and Collections there, and the [complete guide to saving recipes from TikTok, Instagram and Facebook](../how-to-save-recipes-from-tiktok-instagram-facebook/) puts all three side by side.
+Yes. The same idea works on every app: bookmarks are for browsing, written recipes are for cooking. Our guide to [saving recipes on TikTok](../how-to-save-recipes-on-tiktok/) covers Favorites and Collections there, and the [complete guide to saving recipes from TikTok, Instagram and Facebook](../how-to-save-recipes-from-tiktok-instagram-facebook/) puts all three side by side. For Facebook specifically, including recipe groups, see [how to save recipes on Facebook](../how-to-save-recipes-on-facebook/).
 
 ## How do you keep Instagram recipes organized once you save them?
 

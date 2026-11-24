@@ -146,7 +146,7 @@ All three keep the video or a pointer to it. None gives you a clean list of ingr
 
 ## Save TikTok recipes as real recipes with Nasi
 
-If you save a lot of cooking videos, [Nasi](../../) is built for exactly this. On your iPhone, tap Share on a TikTok, choose Nasi, or paste the link. Nasi watches the video, listens to the creator and reads the caption, then writes out the ingredients with amounts, numbered steps, servings and cook time, with a link back to the creator. It works the same way for Instagram Reels and Facebook videos.
+If you save a lot of cooking videos, [Nasi](../../) is built for exactly this. On your iPhone, tap Share on a TikTok, choose Nasi, or paste the link. Nasi watches the video, listens to the creator and reads the caption, then writes out the ingredients with amounts, numbered steps, servings and cook time, with a link back to the creator. It works the same way for Instagram Reels and Facebook videos, and our guide to [saving recipes from Facebook videos and groups](../how-to-save-recipes-on-facebook/) covers the Facebook side in detail.
 
 Your recipes go into searchable cookbooks, so "lemon orzo" actually finds the lemon orzo. From there you can scale servings, add ingredients to your shopping list, drop the dish into your weekly meal plan, or cook with hands-free cook mode and say "next" to move through the steps.
 

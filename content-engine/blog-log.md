@@ -13,7 +13,7 @@
 - 2026-11-13 | yam-thanksgiving-recipes | Sweet Potato and Yam Recipes for Thanksgiving | ~1460 words | yam thanksgiving recipes
 - 2026-11-13 | recipe-app-best | The Best Recipe Apps, Ranked by Home Cooks Who Save From Social | ~2010 words | recipe app best (catch-up)
 - 2026-11-14 | meal-prep-ideas-recipes | Meal Prep Ideas: 30 Recipes That Reheat Well | ~1300 words | meal prep ideas recipes
-- 2026-11-14 | what-to-make-with-ingredients-i-have | What to Make With the Ingredients You Already Have | ~1450 words | what to make with ingredients i have (catch-up)
+- 2026-11-14 | what-to-make-with-ingredients-i-have | What to Make With the Ingredients You Already Have | ~1600 words | what to make with ingredients i have (catch-up)
 - 2026-11-15 | southern-thanksgiving-recipes-most-saved | The Most-Saved Southern Thanksgiving Recipes | ~1290 words | southern thanksgiving recipes most saved
 - 2026-11-15 | make-a-family-recipe-book | How to Make a Family Recipe Book (Digital and Printed) | ~1560 words | make a family recipe book (catch-up)
 - 2026-11-16 | potato-and-leek-soup-recipes | Potato Leek Soup (and 4 Twists) | ~1530 words | potato and leek soup recipes
@@ -39,3 +39,4 @@
 - 2026-11-23 | christmas-dinner-ideas-sides | Christmas Side Dishes | ~1600 words | christmas dinner ideas sides
 - 2026-11-23 | how-many-tablespoons-in-1-3-cup | How Many Tablespoons in 1/3 Cup? | ~1050 words | how many tablespoons in 1/3 cup (catch-up)
 - 2026-11-23 | christmas-cookies-italian | Italian Christmas Cookies | ~1250 words | christmas cookies italian (catch-up)
+- 2026-11-24 | how-to-save-recipes-on-facebook | How to Save Recipes From Facebook Videos and Groups | ~1600 words | how to save recipes on facebook
