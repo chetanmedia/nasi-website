@@ -134,6 +134,6 @@ Do not leave cooked food out at room temperature for more than 2 hours. Refriger
 
 ## How do you plan Christmas dinner without the stress?
 
-Planning is half the work of a holiday meal. Laying out your menu across the week helps, and our guide on [how to meal plan for a week](../how-to-meal-plan-for-a-week/) shows the same approach on an everyday scale.
+Planning is half the work of a holiday meal. Laying out your menu across the week helps, and our guide on [how to meal plan for a week](../how-to-meal-plan-for-a-week/) shows the same approach on an everyday scale. Hosting a crowd? Our [Christmas dinner ideas for large groups](../christmas-dinner-ideas-for-large-groups/) cover portions and a make-ahead plan.
 
 If your Christmas ideas are scattered across saved reels, [Nasi](../../) can pull them together. Import recipes from TikTok, Instagram Reels and Facebook videos, or scan a handwritten family card. Then drop each dish into the weekly meal plan for Christmas week and tap "Add to shopping list" to build one list for everything. That way the only thing left to think about on the day is the cooking.

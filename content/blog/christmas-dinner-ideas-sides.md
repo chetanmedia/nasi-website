@@ -138,7 +138,7 @@ Here is one way to spread the work for a dinner at 5 PM.
 - When the roast comes out to rest: turn the oven up, roast potatoes and vegetables, and reheat the gratin and stuffing.
 - Final 10 minutes: sauté the green beans, finish the gravy, dress the salad and warm the rolls.
 
-Food safety matters with a big spread. Do not leave cooked sides at room temperature for more than 2 hours, and get leftovers into the fridge promptly. For the turkey and ham that come after, our [leftover turkey recipes](../using-leftover-turkey-recipes/) have plenty of ideas.
+Food safety matters with a big spread. Do not leave cooked sides at room temperature for more than 2 hours, and get leftovers into the fridge promptly. For the turkey and ham that come after, our [leftover turkey recipes](../using-leftover-turkey-recipes/) have plenty of ideas. If you are feeding a big crowd, see our [Christmas dinner ideas for large groups](../christmas-dinner-ideas-for-large-groups/) for amounts per person.
 
 ## How can you keep all your Christmas side recipes in one place?
 

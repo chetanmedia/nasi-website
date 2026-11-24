@@ -97,7 +97,7 @@ You can prep a full week of high-protein food in about two hours. Here is a simp
 5. **Make one sauce.** A yogurt herb sauce or peanut sauce, stored in a jar.
 6. **Cool, then portion.** Let food cool before lidding, and get it into the fridge within 2 hours of cooking.
 
-Our guide on [how to meal plan for a week](../how-to-meal-plan-for-a-week/) shows how to turn this prep into a full plan and grocery list. For more general ideas beyond protein, see our [meal prep ideas and recipes](../meal-prep-ideas-recipes/).
+Our guide on [how to meal plan for a week](../how-to-meal-plan-for-a-week/) shows how to turn this prep into a full plan and grocery list. For more general ideas beyond protein, see our [meal prep ideas and recipes](../meal-prep-ideas-recipes/), and for meat-free options, our [vegetarian meal prep ideas](../veg-meal-prep-ideas/).
 
 ## How long does high-protein meal prep last?
 

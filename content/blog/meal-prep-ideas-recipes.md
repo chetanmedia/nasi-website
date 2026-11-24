@@ -122,7 +122,7 @@ Start whatever takes longest first: the slow cooker or the oven. While that runs
 
 Cooking for one? Halve a family recipe. Feeding four? Double it. Our [recipe scaler](../../tools/recipe-scaler/) does the math for you, so you are not dividing 3/4 cup by three at 9 p.m.
 
-If you want a full system for this, our guide on [how to meal plan for a week](../how-to-meal-plan-for-a-week/) walks through the planning side, from picking recipes to building one shopping list. And if you are cooking from whatever is already in the fridge, the [ingredient substitution chart](../ingredient-substitution-chart/) helps you swap what you don't have.
+If you want a full system for this, our guide on [how to meal plan for a week](../how-to-meal-plan-for-a-week/) walks through the planning side, from picking recipes to building one shopping list. And if you are cooking from whatever is already in the fridge, the [ingredient substitution chart](../ingredient-substitution-chart/) helps you swap what you don't have. Skipping meat this week? Try our [vegetarian meal prep ideas](../veg-meal-prep-ideas/).
 
 ## Where do you find meal prep recipes worth saving?
 
