@@ -43,3 +43,5 @@
 - 2026-11-24 | christmas-dinner-ideas-for-large-groups | Christmas Dinner Ideas for a Large Group | ~1600 words | christmas dinner ideas for large groups (catch-up)
 - 2026-11-24 | veg-meal-prep-ideas | Vegetarian Meal Prep Ideas | ~1550 words | veg meal prep ideas (catch-up)
 - 2026-11-25 | non-traditional-christmas-dinner-ideas | Non-Traditional Christmas Dinner Ideas | ~1400 words | non traditional christmas dinner ideas
+- 2026-11-25 | soup-recipes-italian-wedding | Italian Wedding Soup | ~1450 words | soup recipes italian wedding (catch-up)
+- 2026-11-25 | recipe-card-template-christmas | Give Family Recipes This Christmas: Recipe Card Gift Ideas | ~1400 words | recipe card template christmas (catch-up)
