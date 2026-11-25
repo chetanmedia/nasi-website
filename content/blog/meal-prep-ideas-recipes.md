@@ -1,13 +1,16 @@
 ---
 title: "Meal Prep Ideas: 30 Recipes That Reheat Well"
-description: Meal prep ideas recipes that still taste good on day four. 30 make-ahead lunches, dinners and breakfasts that reheat well, plus storage tips and a plan.
+description: "Meal prep ideas and recipes that taste good on day four: 30 make-ahead meals that reheat well, how long each keeps, and how to date your containers."
 date: 2026-11-14
+updated: 2026-11-25
 cluster: PLAN
 cover: tofu
 keywords: [meal prep ideas recipes, meal prep ideas, easy meal prep ideas, meal prep recipes that reheat well, make ahead lunches]
 faq:
   - q: How long does meal prep last in the fridge?
     a: Most cooked meals keep safely for 3 to 4 days in the fridge at 40°F or below. Cool food quickly, store it in shallow airtight containers, and freeze anything you won't eat by day four.
+  - q: How do you date meal prep containers?
+    a: Write the dish and the day you cooked it on masking tape or a removable label, then add a use-by day 3 to 4 days later for the fridge. Put the oldest containers at the front so they get eaten first.
   - q: What foods reheat best for meal prep?
     a: Saucy and braised dishes reheat best. Curries, chilis, stews, soups, grain bowls with sauce on the side and baked pasta all hold their texture. Crispy foods, delicate fish and dressed salads are better made fresh or assembled the day you eat them.
   - q: Should I store meal prep sauce separately?
@@ -97,6 +100,15 @@ Don't leave cooked food out for more than 2 hours. Divide big batches into shall
 ### Know the 4-day rule
 
 Most cooked meals keep 3 to 4 days in the fridge at 40°F or below. If you are prepping on Sunday, plan to freeze anything meant for Friday or later.
+
+### Date every container
+
+Label each container with the dish, the day you cooked it and a use-by day: 3 to 4 days later in the fridge. Masking tape and a marker work fine and peel off in the wash. Line the fridge up oldest-first so Monday's lunch never ends up behind Thursday's.
+
+| Cooked on | Eat by (fridge) | Freeze instead if you plan to eat it |
+|---|---|---|
+| Sunday | Wednesday or Thursday | Friday or later |
+| Wednesday | Saturday or Sunday | The following week |
 
 ### Freeze smart
 
