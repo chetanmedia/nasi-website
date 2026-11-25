@@ -42,3 +42,4 @@
 - 2026-11-24 | how-to-save-recipes-on-facebook | How to Save Recipes From Facebook Videos and Groups | ~1600 words | how to save recipes on facebook
 - 2026-11-24 | christmas-dinner-ideas-for-large-groups | Christmas Dinner Ideas for a Large Group | ~1600 words | christmas dinner ideas for large groups (catch-up)
 - 2026-11-24 | veg-meal-prep-ideas | Vegetarian Meal Prep Ideas | ~1550 words | veg meal prep ideas (catch-up)
+- 2026-11-25 | non-traditional-christmas-dinner-ideas | Non-Traditional Christmas Dinner Ideas | ~1400 words | non traditional christmas dinner ideas
