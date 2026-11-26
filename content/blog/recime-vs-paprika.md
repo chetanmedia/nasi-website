@@ -26,7 +26,7 @@ They solve different problems.
 
 ### ReciMe: social-first
 
-ReciMe's pitch is getting recipes out of social media. You share a post from TikTok, Instagram or Facebook, and it builds a recipe card. It also handles websites and adds meal planning and grocery lists. For a deeper look, read our full [ReciMe review](../recime-review/).
+ReciMe's pitch is getting recipes out of social media. You share a post from TikTok, Instagram or Facebook, and it builds a recipe card. It also handles websites and adds meal planning and grocery lists. For a deeper look, read our full [ReciMe review](../recime-review/), or see how it stacks up against a classic recipe box in [ReciMe vs Recipe Keeper](../recime-vs-recipe-keeper/).
 
 ### Paprika: web-first and offline
 

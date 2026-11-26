@@ -153,7 +153,7 @@ Our step-by-step guide on [saving recipes from TikTok, Instagram and Facebook](.
 
 ### If your recipes come from websites
 
-Paprika is a one-time purchase on each platform, so there is no yearly bill. Copy Me That and Recipe Keeper have free versions that cover the basics. Check each app's store page for current prices before you buy.
+Paprika is a one-time purchase on each platform, so there is no yearly bill. Copy Me That and Recipe Keeper have free versions that cover the basics (see our [ReciMe vs Recipe Keeper comparison](../recime-vs-recipe-keeper/)). Check each app's store page for current prices before you buy.
 
 ### If you want meal planning more than saving
 

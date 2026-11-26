@@ -76,7 +76,7 @@ Copy Me That clips recipes from websites with a browser extension or its app. Th
 
 ### Recipe Keeper: a digital recipe box for the long haul
 
-Recipe Keeper feels like the recipe box your family kept for decades, just on your phone. You can import from websites, type recipes in and sort them by category. The free version has a recipe cap, and a one-time Pro upgrade removes it.
+Recipe Keeper feels like the recipe box your family kept for decades, just on your phone. You can import from websites, type recipes in and sort them by category. The free version has a recipe cap, and a one-time Pro upgrade removes it. We compare the two head to head in [ReciMe vs Recipe Keeper](../recime-vs-recipe-keeper/).
 
 **Pick it if:** you are building a family collection that will last.
 **Skip it if:** you want social video import.
