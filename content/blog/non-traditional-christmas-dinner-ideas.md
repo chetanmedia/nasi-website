@@ -68,7 +68,7 @@ These take a little more setup, but the meal itself becomes the entertainment.
 ### Feasts with a theme
 
 14. **Seafood boil.** Shrimp, mussels, corn and potatoes poured onto a paper-lined table. Messy in the best way.
-15. **Italian feast.** Antipasti, a baked pasta, a roast chicken and tiramisu. Some families do a seafood spread on Christmas Eve, which also works.
+15. **Italian feast.** Antipasti, a baked pasta, a roast chicken and tiramisu. Some families do a seafood spread on Christmas Eve, which also works (see our [Christmas Eve dinner ideas](../what-to-make-for-dinner-christmas-eve/)).
 16. **Indian curry spread.** Two or three curries, rice, naan, raita and chutneys. Make the curries a day ahead and they'll taste even better.
 17. **Mexican Christmas.** Tamales, pozole or enchiladas. Many families make tamales together as a holiday tradition.
 18. **Homemade pizza party.** Make or buy dough, set out toppings, and let everyone build their own.

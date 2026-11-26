@@ -81,7 +81,7 @@ This is where most mix-ups happen. Keep these handy:
 
 - **Half of 1/4 cup** is 1/8 cup, which is 2 tablespoons.
 - **A quarter of 1/4 cup** is 1 tablespoon.
-- **Double 1/4 cup** is 1/2 cup, or 8 tablespoons.
+- **Double 1/4 cup** is 1/2 cup, or 8 tablespoons (more in [how many tablespoons in 1/2 cup](../how-many-tablespoons-is-1-2-cup/)).
 - **Triple 1/4 cup** is 3/4 cup, or 12 tablespoons.
 - **1 1/2 times 1/4 cup** is 6 tablespoons, or 3/8 cup.
 

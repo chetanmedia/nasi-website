@@ -62,7 +62,7 @@ These are described in general terms. Pick one based on your oven and your crowd
 4. **Roast turkey or turkey breast.** A breast roasts much faster than a whole bird. Cook to 165°F (74°C).
 5. **Roast chicken.** The easy choice for small tables. Also 165°F (74°C) in the thickest part.
 6. **Pork loin or tenderloin.** Cook to 145°F (63°C) and rest for 3 minutes.
-7. **Baked salmon.** Ready in about 15 minutes. Good for a lighter Christmas Eve.
+7. **Baked salmon.** Ready in about 15 minutes. Good for a lighter Christmas Eve, and we have more ideas for [what to make for dinner on Christmas Eve](../what-to-make-for-dinner-christmas-eve/).
 8. **Mushroom wellington.** A meat-free centerpiece that still feels like an occasion.
 
 If you are roasting a turkey, the [turkey calculator](../../tools/turkey-calculator/) helps you work out size and timing.

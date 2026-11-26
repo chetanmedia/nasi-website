@@ -34,7 +34,7 @@ These are US measures, with metric in brackets. Level every spoon.
 | 3/4 cup | 12 tbsp | 36 tsp | 6 fl oz | 180 mL |
 | 1 cup | 16 tbsp | 48 tsp | 8 fl oz | 240 mL |
 
-For the quarter-cup version of this chart, see [how many tablespoons in 1/4 cup](../how-many-tablespoons-in-1-4-c/). For bigger amounts, [how many tablespoons in a cup](../how-many-tablespoons-in-a-cup/) has you covered.
+For the quarter-cup version of this chart, see [how many tablespoons in 1/4 cup](../how-many-tablespoons-in-1-4-c/), or the half-cup version in [how many tablespoons in 1/2 cup](../how-many-tablespoons-is-1-2-cup/). For bigger amounts, [how many tablespoons in a cup](../how-many-tablespoons-in-a-cup/) has you covered.
 
 ## Why is 1/3 cup 5 tablespoons and 1 teaspoon?
 

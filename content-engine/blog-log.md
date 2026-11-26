@@ -46,3 +46,5 @@
 - 2026-11-25 | soup-recipes-italian-wedding | Italian Wedding Soup | ~1450 words | soup recipes italian wedding (catch-up)
 - 2026-11-25 | recipe-card-template-christmas | Give Family Recipes This Christmas: Recipe Card Gift Ideas | ~1400 words | recipe card template christmas (catch-up)
 - 2026-11-26 | recime-vs-recipe-keeper | ReciMe vs Recipe Keeper: Feature-by-Feature | ~1730 words | recime vs recipe keeper
+- 2026-11-26 | what-to-make-for-dinner-christmas-eve | What to Make for Christmas Eve Dinner | ~1400 words | what to make for dinner christmas eve (catch-up)
+- 2026-11-26 | how-many-tablespoons-is-1-2-cup | How Many Tablespoons in 1/2 Cup? | ~1100 words | how many tablespoons is 1/2 cup (catch-up)
