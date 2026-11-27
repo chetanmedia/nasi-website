@@ -49,3 +49,4 @@
 - 2026-11-26 | what-to-make-for-dinner-christmas-eve | What to Make for Christmas Eve Dinner | ~1400 words | what to make for dinner christmas eve (catch-up)
 - 2026-11-26 | how-many-tablespoons-is-1-2-cup | How Many Tablespoons in 1/2 Cup? | ~1100 words | how many tablespoons is 1/2 cup (catch-up)
 - 2026-11-27 | christmas-dinner-ideas-for-two | Christmas Dinner for Two | ~1326 words | christmas dinner ideas for two (today's row already published; oldest planned)
+- 2026-11-27 | dinner-meal-prep-ideas | Dinner Meal Prep Ideas for the Whole Week | ~1079 words | dinner meal prep ideas (catch-up)
