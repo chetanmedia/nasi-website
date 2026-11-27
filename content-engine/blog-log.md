@@ -48,3 +48,4 @@
 - 2026-11-26 | recime-vs-recipe-keeper | ReciMe vs Recipe Keeper: Feature-by-Feature | ~1730 words | recime vs recipe keeper
 - 2026-11-26 | what-to-make-for-dinner-christmas-eve | What to Make for Christmas Eve Dinner | ~1400 words | what to make for dinner christmas eve (catch-up)
 - 2026-11-26 | how-many-tablespoons-is-1-2-cup | How Many Tablespoons in 1/2 Cup? | ~1100 words | how many tablespoons is 1/2 cup (catch-up)
+- 2026-11-27 | christmas-dinner-ideas-for-two | Christmas Dinner for Two | ~1326 words | christmas dinner ideas for two (today's row already published; oldest planned)
