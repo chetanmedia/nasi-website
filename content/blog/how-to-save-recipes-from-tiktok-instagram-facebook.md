@@ -1,6 +1,6 @@
 ---
-title: How to Save Recipes From TikTok, Instagram and Facebook (The Complete Guide)
-description: The built-in ways to save cooking videos on TikTok, Instagram and Facebook, why they let you down at dinnertime, and how to turn any reel into a recipe you can actually cook.
+title: How to Save Recipes From TikTok, Instagram and Facebook
+description: "How to save recipes from TikTok, Instagram and Facebook: the built-in save buttons, why they fail at dinnertime, and how to turn any reel into a recipe."
 date: 2026-10-29
 cluster: SAVE
 cover: reel1

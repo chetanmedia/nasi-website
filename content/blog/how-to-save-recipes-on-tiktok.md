@@ -1,5 +1,5 @@
 ---
-title: How to Save Recipes From TikTok (3 Ways, Including One That Never Breaks)
+title: "How to Save Recipes From TikTok: 3 Ways, One That Never Breaks"
 description: How to save recipes on TikTok in 3 ways, from Favorites and Collections to turning videos into written recipes that last even if the post disappears.
 date: 2026-11-12
 cluster: SAVE
