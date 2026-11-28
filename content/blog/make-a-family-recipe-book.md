@@ -37,7 +37,7 @@ Start wide, then narrow down. You want every candidate in one place before you d
 Send a short message to relatives explaining the project and asking for 2 or 3 recipes each. Give a deadline. Make it easy to contribute in whatever form they have:
 
 - A photo of a recipe card or cookbook page
-- A typed recipe in a text or email
+- A typed recipe in a text or email, or on a shared [Google Docs recipe card template](../google-doc-recipe-card-template/)
 - A link to a cooking video they always use
 - A voice memo where they talk through the dish
 

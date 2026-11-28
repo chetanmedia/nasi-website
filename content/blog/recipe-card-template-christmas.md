@@ -62,7 +62,7 @@ You don't need design skills. A good template does most of the work.
 
 ### Step 1: Choose a template
 
-Free recipe card templates are available in Canva, Google Docs, Microsoft Word and many printable sites. Look for one with room for a title, servings, ingredients and steps. For a holiday look, pick one with a simple festive border, holly or snowflakes, and keep the recipe area clean and readable. If you're using Canva, our [Canva recipe card template guide](../canva-recipe-card-template/) shows each step.
+Free recipe card templates are available in Canva, Google Docs, Microsoft Word and many printable sites. Look for one with room for a title, servings, ingredients and steps. For a holiday look, pick one with a simple festive border, holly or snowflakes, and keep the recipe area clean and readable. If you're using Canva, our [Canva recipe card template guide](../canva-recipe-card-template/) shows each step, and our [Google Docs recipe card template walkthrough](../google-doc-recipe-card-template/) covers the plain, easy-to-share version.
 
 ### Step 2: Pick a size
 

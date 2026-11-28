@@ -29,6 +29,8 @@ Canva is free to start, runs in a browser or on your phone, and handles the desi
 - **A consistent recipe box.** Every card looks the same, so the box is easy to flip through.
 - **Recipe books.** One design, many pages, downloaded as one PDF.
 
+If you'd rather keep things simple and easy to share with relatives, a [Google Docs recipe card template](../google-doc-recipe-card-template/) works well too.
+
 If you're building a whole family collection, our guide to [making a family recipe book](../make-a-family-recipe-book/) covers gathering recipes, organizing chapters and printing.
 
 ## How do you make a recipe card in Canva, step by step?
