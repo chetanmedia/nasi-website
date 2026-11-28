@@ -51,3 +51,5 @@
 - 2026-11-27 | christmas-dinner-ideas-for-two | Christmas Dinner for Two | ~1326 words | christmas dinner ideas for two (today's row already published; oldest planned)
 - 2026-11-27 | dinner-meal-prep-ideas | Dinner Meal Prep Ideas for the Whole Week | ~1079 words | dinner meal prep ideas (catch-up)
 - 2026-11-28 | google-doc-recipe-card-template | Google Docs Recipe Card Template | ~1570 words | google doc recipe card template (today's row already published; oldest planned)
+- 2026-11-28 | new-years-eve-dinner-ideas | New Year's Eve Dinner Ideas | ~1040 words | new years eve dinner ideas (catch-up)
+- 2026-11-28 | bean-and-ham-soup-recipes | Ham and Bean Soup Recipes | ~950 words | bean and ham soup recipes (catch-up)

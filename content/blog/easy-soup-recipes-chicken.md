@@ -113,7 +113,7 @@ Cream-based soups can separate a little after freezing. Stir well as you reheat,
 
 ## Which other soups are worth trying?
 
-If chicken soup has become a weekly habit, branch out. A hearty [vegetable beef soup](../soup-recipes-vegetable-beef/) works on almost the same base method, and [potato and leek soup](../potato-and-leek-soup-recipes/) is a creamy, cozy option that happens to be vegetarian.
+If chicken soup has become a weekly habit, branch out. A hearty [vegetable beef soup](../soup-recipes-vegetable-beef/) works on almost the same base method, and [potato and leek soup](../potato-and-leek-soup-recipes/) is a creamy, cozy option that happens to be vegetarian. Got a leftover holiday ham? Try one of these [ham and bean soup recipes](../bean-and-ham-soup-recipes/).
 
 ## How do you cook soup without touching your phone?
 

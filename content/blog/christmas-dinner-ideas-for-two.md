@@ -111,7 +111,7 @@ A simple timeline keeps the day calm. Here is one way to do it.
 - Cook quick mains like steak, fish or scallops in the last 15 minutes.
 - Let meat rest while you finish the sauce and warm the plates.
 
-If you like planning the week around the holiday, our guide on [how to meal plan for a week](../how-to-meal-plan-for-a-week/) uses the same idea on an everyday scale.
+If you like planning the week around the holiday, our guide on [how to meal plan for a week](../how-to-meal-plan-for-a-week/) uses the same idea on an everyday scale, and our [New Year's Eve dinner ideas](../new-years-eve-dinner-ideas/) keep the celebration going a week later.
 
 ## How do I scale big holiday recipes down for two?
 

@@ -114,4 +114,4 @@ Freeze the soup without the pasta for up to about 3 months. Thaw in the fridge, 
 
 Rolling meatballs means messy hands, and that's exactly when you need to check the next step. If you saved a wedding soup reel from TikTok or Instagram, you can share it into [Nasi](../../) and it turns into a clean recipe with ingredients, steps, servings and cook time, plus a link to the creator. Then open cook mode: it keeps the screen awake, runs the simmer timers, and moves through steps when you say "next" or "back". No meatball fingerprints on your screen.
 
-Looking for more cozy pots? Try our [easy chicken soup recipes](../easy-soup-recipes-chicken/), [vegetable beef soup recipes](../soup-recipes-vegetable-beef/), or [what to make with the ingredients you have](../what-to-make-with-ingredients-i-have/).
+Looking for more cozy pots? Try our [easy chicken soup recipes](../easy-soup-recipes-chicken/), [vegetable beef soup recipes](../soup-recipes-vegetable-beef/), [ham and bean soup recipes](../bean-and-ham-soup-recipes/), or [what to make with the ingredients you have](../what-to-make-with-ingredients-i-have/).
